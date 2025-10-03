@@ -1,0 +1,641 @@
+questions:
+  - label: "contexte-nature-entite"
+    text: "Quelle est la nature de votre entité ?"
+    question_type: "single_choice"
+    weight: 0
+    active_status: true
+    categories:
+      - "Contexte"
+    tooltip_content: |
+      <div>
+        <h5>Entités publiques</h5>
+        <p>Les entités publiques sont invitées à s'orienter vers le service ANSSI https://club.ssi.gouv.fr/ pour bénéficier d'outils gratuits d'audits automatisés.</p>
+      </div>
+    answer_options:
+      - text: "Entité publique (ex : collectivité, administration, syndicats mixte, GIP etc.)"
+        identifier: "contexte-nature-entite-entite-publique"
+        order_index: 0
+      - text: "Entreprise privée (ex : TPE, PME, ETI)"
+        identifier: "contexte-nature-entite-entreprise-privee"
+        order_index: 1
+      - text: "Association (ex : association loi 1901)"
+        identifier: "contexte-nature-entite-association"
+        order_index: 2
+      - text: "Autre"
+        identifier: "contexte-nature-entite-autre"
+        order_index: 3
+
+  - label: "contexte-secteur-activite"
+    text: "Quel est son secteur d'activité ?"
+    question_type: "select"
+    weight: 0
+    active_status: true
+    categories:
+      - "Contexte"
+    tooltip_content: |
+      <div>
+        <h5>Des dispositifs adaptés</h5>
+        <p>Selon le secteur d'activité et la région sélectionnés, l'entité se verra proposer des dispositifs adhoc.</p>
+      </div>
+    answer_options:
+      - text: "Administration"
+        identifier: "contexte-secteur-activite-administration"
+        order_index: 0
+      - text: "Agriculture, sylviculture"
+        identifier: "contexte-secteur-activite-agriculture"
+        order_index: 1
+      - text: "Agroalimentaire"
+        identifier: "contexte-secteur-activite-agroalimentaire"
+        order_index: 2
+      - text: "Industrie"
+        identifier: "contexte-secteur-activite-industrie"
+        order_index: 3
+      - text: "Industrie de défense"
+        identifier: "contexte-secteur-activite-industrie-defense"
+        order_index: 4
+      - text: "Construction"
+        identifier: "contexte-secteur-activite-construction"
+        order_index: 5
+      - text: "Tertiaire"
+        identifier: "contexte-secteur-activite-tertiaire"
+        order_index: 6
+      - text: "Commerce"
+        identifier: "contexte-secteur-activite-commerce"
+        order_index: 7
+      - text: "Transports"
+        identifier: "contexte-secteur-activite-transports"
+        order_index: 8
+      - text: "Hébergement et restauration"
+        identifier: "contexte-secteur-activite-hebergement-et-restauration"
+        order_index: 9
+      - text: "Information et communication"
+        identifier: "contexte-secteur-activite-information-et-communication"
+        order_index: 10
+      - text: "Activités financières et d'assurance"
+        identifier: "contexte-secteur-activite-activites-financieres-et-assurance"
+        order_index: 11
+      - text: "Activités immobilières"
+        identifier: "contexte-secteur-activite-activites-immobilieres"
+        order_index: 12
+      - text: "Activités spécialisées, scientifiques et techniques"
+        identifier: "contexte-secteur-activite-activites-specialisees-scientifiques-et-techniques"
+        order_index: 13
+      - text: "Activités de services administratifs et de soutien"
+        identifier: "contexte-secteur-activite-activites-de-services-administratifs-et-de-soutien"
+        order_index: 14
+      - text: "Enseignement"
+        identifier: "contexte-secteur-activite-enseignement"
+        order_index: 15
+      - text: "Santé"
+        identifier: "contexte-secteur-activite-santé"
+        order_index: 16
+      - text: "Recherche, laboratoire"
+        identifier: "contexte-secteur-activite-recherche"
+        order_index: 17
+      - text: "Médico-sociale"
+        identifier: "contexte-secteur-activite-médico-sociale"
+        order_index: 18
+      - text: "Arts, spectacles et activités récréatives"
+        identifier: "contexte-secteur-activite-arts-spectacles-et-activites-recreatives"
+        order_index: 19
+      - text: "Autres activités de services"
+        identifier: "contexte-secteur-activite-autres-activites-de-services"
+        order_index: 20
+      - text: "Services aux ménages"
+        identifier: "contexte-secteur-activite-services-aux-menages"
+        order_index: 21
+      - text: "Activités extra-territoriales"
+        identifier: "contexte-secteur-activite-activites-extra-territoriales"
+        order_index: 22
+
+  - label: "contexte-departement-tom-siege-social"
+    text: "Dans quel département, ou DROM-COM, votre siège social est-il basé ?"
+    question_type: "select"
+    weight: 0
+    active_status: true
+    categories:
+      - "Contexte"
+    answer_options:
+      - text: "Ain"
+        identifier: "contexte-departement-tom-siege-social-ain"
+        order_index: 1
+      - text: "Aisne"
+        identifier: "contexte-departement-tom-siege-social-aisne"
+        order_index: 2
+      - text: "Allier"
+        identifier: "contexte-departement-tom-siege-social-allier"
+        order_index: 3
+      - text: "Alpes-de-Haute-Provence"
+        identifier: "contexte-departement-tom-siege-social-alpes-de-haute-provence"
+        order_index: 4
+      - text: "Hautes-Alpes"
+        identifier: "contexte-departement-tom-siege-social-hautes-alpes"
+        order_index: 5
+      - text: "Alpes-Maritimes"
+        identifier: "contexte-departement-tom-siege-social-alpes-maritimes"
+        order_index: 6
+      - text: "Ardèche"
+        identifier: "contexte-departement-tom-siege-social-ardeche"
+        order_index: 7
+      - text: "Ardennes"
+        identifier: "contexte-departement-tom-siege-social-ardennes"
+        order_index: 8
+      - text: "Ariège"
+        identifier: "contexte-departement-tom-siege-social-ariege"
+        order_index: 9
+      - text: "Aube"
+        identifier: "contexte-departement-tom-siege-social-aube"
+        order_index: 10
+      - text: "Aude"
+        identifier: "contexte-departement-tom-siege-social-aude"
+        order_index: 11
+      - text: "Aveyron"
+        identifier: "contexte-departement-tom-siege-social-aveyron"
+        order_index: 12
+      - text: "Bouches-du-Rhône"
+        identifier: "contexte-departement-tom-siege-social-bouches-du-rhone"
+        order_index: 13
+      - text: "Calvados"
+        identifier: "contexte-departement-tom-siege-social-calvados"
+        order_index: 14
+      - text: "Cantal"
+        identifier: "contexte-departement-tom-siege-social-cantal"
+        order_index: 15
+      - text: "Charente"
+        identifier: "contexte-departement-tom-siege-social-charente"
+        order_index: 16
+      - text: "Charente-Maritime"
+        identifier: "contexte-departement-tom-siege-social-charente-maritime"
+        order_index: 17
+      - text: "Cher"
+        identifier: "contexte-departement-tom-siege-social-cher"
+        order_index: 18
+      - text: "Corrèze"
+        identifier: "contexte-departement-tom-siege-social-correze"
+        order_index: 19
+      - text: "Corse-du-Sud"
+        identifier: "contexte-departement-tom-siege-social-corse-du-sud"
+        order_index: 20
+      - text: "Haute-Corse"
+        identifier: "contexte-departement-tom-siege-social-haute-corse"
+        order_index: 20
+      - text: "Côte-d'Or"
+        identifier: "contexte-departement-tom-siege-social-cote-d-or"
+        order_index: 21
+      - text: "Côtes-d'Armor"
+        identifier: "contexte-departement-tom-siege-social-côtes-d-armor"
+        order_index: 22
+      - text: "Creuse"
+        identifier: "contexte-departement-tom-siege-social-creuse"
+        order_index: 23
+      - text: "Dordogne"
+        identifier: "contexte-departement-tom-siege-social-dordogne"
+        order_index: 24
+      - text: "Doubs"
+        identifier: "contexte-departement-tom-siege-social-doubs"
+        order_index: 25
+      - text: "Drôme"
+        identifier: "contexte-departement-tom-siege-social-drome"
+        order_index: 26
+      - text: "Eure"
+        identifier: "contexte-departement-tom-siege-social-eure"
+        order_index: 27
+      - text: "Eure-et-Loir"
+        identifier: "contexte-departement-tom-siege-social-eure-et-loir"
+        order_index: 28
+      - text: "Finistère"
+        identifier: "contexte-departement-tom-siege-social-finistere"
+        order_index: 29
+      - text: "Gard"
+        identifier: "contexte-departement-tom-siege-social-gard"
+        order_index: 30
+      - text: "Haute-Garonne"
+        identifier: "contexte-departement-tom-siege-social-haute-garonne"
+        order_index: 31
+      - text: "Gers"
+        identifier: "contexte-departement-tom-siege-social-gers"
+        order_index: 32
+      - text: "Gironde"
+        identifier: "contexte-departement-tom-siege-social-gironde"
+        order_index: 33
+      - text: "Hérault"
+        identifier: "contexte-departement-tom-siege-social-herault"
+        order_index: 34
+      - text: "Ille-et-Vilaine"
+        identifier: "contexte-departement-tom-siege-social-ille-et-vilaine"
+        order_index: 35
+      - text: "Indre"
+        identifier: "contexte-departement-tom-siege-social-indre"
+        order_index: 36
+      - text: "Indre-et-Loire"
+        identifier: "contexte-departement-tom-siege-social-indre-et-loire"
+        order_index: 37
+      - text: "Isère"
+        identifier: "contexte-departement-tom-siege-social-isere"
+        order_index: 38
+      - text: "Jura"
+        identifier: "contexte-departement-tom-siege-social-jura"
+        order_index: 39
+      - text: "Landes"
+        identifier: "contexte-departement-tom-siege-social-landes"
+        order_index: 40
+      - text: "Loir-et-Cher"
+        identifier: "contexte-departement-tom-siege-social-loir-et-cher"
+        order_index: 41
+      - text: "Loire"
+        identifier: "contexte-departement-tom-siege-social-loire"
+        order_index: 42
+      - text: "Haute-Loire"
+        identifier: "contexte-departement-tom-siege-social-haute-loire"
+        order_index: 43
+      - text: "Loire-Atlantique"
+        identifier: "contexte-departement-tom-siege-social-loire-atlantique"
+        order_index: 44
+      - text: "Loiret"
+        identifier: "contexte-departement-tom-siege-social-loiret"
+        order_index: 45
+      - text: "Lot"
+        identifier: "contexte-departement-tom-siege-social-lot"
+        order_index: 46
+      - text: "Lot-et-Garonne"
+        identifier: "contexte-departement-tom-siege-social-lot-et-garonne"
+        order_index: 47
+      - text: "Lozère"
+        identifier: "contexte-departement-tom-siege-social-lozere"
+        order_index: 48
+      - text: "Maine-et-Loire"
+        identifier: "contexte-departement-tom-siege-social-maine-et-loire"
+        order_index: 49
+      - text: "Manche"
+        identifier: "contexte-departement-tom-siege-social-manche"
+        order_index: 50
+      - text: "Marne"
+        identifier: "contexte-departement-tom-siege-social-marne"
+        order_index: 51
+      - text: "Haute-Marne"
+        identifier: "contexte-departement-tom-siege-social-haute-marne"
+        order_index: 52
+      - text: "Mayenne"
+        identifier: "contexte-departement-tom-siege-social-mayenne"
+        order_index: 53
+      - text: "Meurthe-et-Moselle"
+        identifier: "contexte-departement-tom-siege-social-meurthe-et-moselle"
+        order_index: 54
+      - text: "Meuse"
+        identifier: "contexte-departement-tom-siege-social-meuse"
+        order_index: 55
+      - text: "Morbihan"
+        identifier: "contexte-departement-tom-siege-social-morbihan"
+        order_index: 56
+      - text: "Moselle"
+        identifier: "contexte-departement-tom-siege-social-moselle"
+        order_index: 57
+      - text: "Nièvre"
+        identifier: "contexte-departement-tom-siege-social-nievre"
+        order_index: 58
+      - text: "Nord"
+        identifier: "contexte-departement-tom-siege-social-nord"
+        order_index: 59
+      - text: "Oise"
+        identifier: "contexte-departement-tom-siege-social-oise"
+        order_index: 60
+      - text: "Orne"
+        identifier: "contexte-departement-tom-siege-social-orne"
+        order_index: 61
+      - text: "Pas-de-Calais"
+        identifier: "contexte-departement-tom-siege-social-pas-de-calais"
+        order_index: 62
+      - text: "Puy-de-Dôme"
+        identifier: "contexte-departement-tom-siege-social-puy-de-dome"
+        order_index: 63
+      - text: "Pyrénées-Atlantiques"
+        identifier: "contexte-departement-tom-siege-social-pyrenees-atlantiques"
+        order_index: 64
+      - text: "Hautes-Pyrénées"
+        identifier: "contexte-departement-tom-siege-social-hautes-pyrenees"
+        order_index: 65
+      - text: "Pyrénées-Orientales"
+        identifier: "contexte-departement-tom-siege-social-pyrenees-orientales"
+        order_index: 66
+      - text: "Bas-Rhin"
+        identifier: "contexte-departement-tom-siege-social-bas-rhin"
+        order_index: 67
+      - text: "Haut-Rhin"
+        identifier: "contexte-departement-tom-siege-social-haut-rhin"
+        order_index: 68
+      - text: "Rhône"
+        identifier: "contexte-departement-tom-siege-social-rhone"
+        order_index: 69
+      - text: "Haute-Saône"
+        identifier: "contexte-departement-tom-siege-social-haute-saone"
+        order_index: 70
+      - text: "Saône-et-Loire"
+        identifier: "contexte-departement-tom-siege-social-saone-et-loire"
+        order_index: 71
+      - text: "Sarthe"
+        identifier: "contexte-departement-tom-siege-social-sarthe"
+        order_index: 72
+      - text: "Savoie"
+        identifier: "contexte-departement-tom-siege-social-savoie"
+        order_index: 73
+      - text: "Haute-Savoie"
+        identifier: "contexte-departement-tom-siege-social-haute-savoie"
+        order_index: 74
+      - text: "Paris"
+        identifier: "contexte-departement-tom-siege-social-paris"
+        order_index: 75
+      - text: "Seine-Maritime"
+        identifier: "contexte-departement-tom-siege-social-seine-maritime"
+        order_index: 76
+      - text: "Seine-et-Marne"
+        identifier: "contexte-departement-tom-siege-social-seine-et-marne"
+        order_index: 77
+      - text: "Yvelines"
+        identifier: "contexte-departement-tom-siege-social-yvelines"
+        order_index: 78
+      - text: "Deux-Sèvres"
+        identifier: "contexte-departement-tom-siege-social-deux-sevres"
+        order_index: 79
+      - text: "Somme"
+        identifier: "contexte-departement-tom-siege-social-somme"
+        order_index: 80
+      - text: "Tarn"
+        identifier: "contexte-departement-tom-siege-social-tarn"
+        order_index: 81
+      - text: "Tarn-et-Garonne"
+        identifier: "contexte-departement-tom-siege-social-tarn-et-garonne"
+        order_index: 82
+      - text: "Var"
+        identifier: "contexte-departement-tom-siege-social-var"
+        order_index: 83
+      - text: "Vaucluse"
+        identifier: "contexte-departement-tom-siege-social-vaucluse"
+        order_index: 84
+      - text: "Vendée"
+        identifier: "contexte-departement-tom-siege-social-vendee"
+        order_index: 85
+      - text: "Vienne"
+        identifier: "contexte-departement-tom-siege-social-vienne"
+        order_index: 86
+      - text: "Haute-Vienne"
+        identifier: "contexte-departement-tom-siege-social-haute-vienne"
+        order_index: 87
+      - text: "Vosges"
+        identifier: "contexte-departement-tom-siege-social-vosges"
+        order_index: 88
+      - text: "Yonne"
+        identifier: "contexte-departement-tom-siege-social-yonne"
+        order_index: 89
+      - text: "Territoire de Belfort"
+        identifier: "contexte-departement-tom-siege-social-territoire-de-belfort"
+        order_index: 90
+      - text: "Essonne"
+        identifier: "contexte-departement-tom-siege-social-essonne"
+        order_index: 91
+      - text: "Hauts-de-Seine"
+        identifier: "contexte-departement-tom-siege-social-hauts-de-seine"
+        order_index: 92
+      - text: "Seine-Saint-Denis"
+        identifier: "contexte-departement-tom-siege-social-seine-saint-denis"
+        order_index: 93
+      - text: "Val-de-Marne"
+        identifier: "contexte-departement-tom-siege-social-val-de-marne"
+        order_index: 94
+      - text: "Val-d'Oise"
+        identifier: "contexte-departement-tom-siege-social-val-d-oise"
+        order_index: 95
+      - text: "Guadeloupe"
+        identifier: "contexte-departement-tom-siege-social-guadeloupe"
+        order_index: 971
+      - text: "Martinique"
+        identifier: "contexte-departement-tom-siege-social-martinique"
+        order_index: 972
+      - text: "Guyane"
+        identifier: "contexte-departement-tom-siege-social-guyane"
+        order_index: 973
+      - text: "La Réunion"
+        identifier: "contexte-departement-tom-siege-social-la-reunion"
+        order_index: 974
+      - text: "Collectivité de Saint-Pierre et Miquelon"
+        identifier: "contexte-departement-tom-siege-social-saintpierreetmiquelon"
+        order_index: 975
+      - text: "Mayotte"
+        identifier: "contexte-departement-tom-siege-social-mayotte"
+        order_index: 976
+      - text: "Collectivité de Saint-Barthélémy"
+        identifier: "contexte-departement-tom-siege-social-saintbarthélémy"
+        order_index: 977
+      - text: "Collectivité de Saint-Martin"
+        identifier: "contexte-departement-tom-siege-social-saintmartin"
+        order_index: 978
+      - text: "Collectivité de Wallis & Futuna"
+        identifier: "contexte-departement-tom-siege-social-wallisetfutuna"
+        order_index: 986
+      - text: "Collectivité de Polynésie Française"
+        identifier: "contexte-departement-tom-siege-social-polynésiefrançaise"
+        order_index: 987
+      - text: "Collectivité de Nouvelle-Calédonie"
+        identifier: "contexte-departement-tom-siege-social-nouvellecalédonie"
+        order_index: 988
+
+  - label: "contexte-nombre-personnes-dans-entite"
+    text: "Combien de personnes compte votre entité ?"
+    question_type: "single_choice"
+    weight: 0
+    active_status: true
+    categories:
+      - "Contexte"
+    answer_options:
+      - text: "Entre 1 et 9"
+        identifier: "contexte-nombre-personnes-dans-entite-entre-1-et-9"
+        order_index: 0
+      - text: "Entre 10 et 49"
+        identifier: "contexte-nombre-personnes-dans-entite-entre-10-et-49"
+        order_index: 1
+      - text: "Entre 50 et 249"
+        identifier: "contexte-nombre-personnes-dans-entite-entre-50-et-249"
+        order_index: 2
+      - text: "Plus de 250"
+        identifier: "contexte-nombre-personnes-dans-entite-plus-de-250"
+        order_index: 4
+
+  - label: "contexte-nombre-postes-travail-dans-entite"
+    text: "Combien de postes de travail compte votre entité ?"
+    question_type: "single_choice"
+    weight: 0
+    active_status: true
+    categories:
+      - "Contexte"
+    tooltip_content: |
+      <div>
+        <h5>Moins de 9 postes</h5>
+        <p>Si l'entité dispose de moins de 9 postes, le questionnaire MonAideCyber se verra légèrement simplifié. Ainsi, les questions 12, 33 et 34 seront facultatives.</p>
+      </div>
+    answer_options:
+      - text: "Entre 1 et 9"
+        identifier: "contexte-nombre-postes-travail-dans-entite-entre-1-et-9"
+        order_index: 0
+        rule_data:
+          reponses:
+            - question_label: "acces-outil-gestion-des-comptes"
+              answer_option_identifier: "acces-outil-gestion-des-comptes-na"
+            - question_label: "sensibilisation-collaborateurs-soumis-obligations-usages-securises"
+              answer_option_identifier: ""
+      - text: "Entre 10 et 49"
+        identifier: "contexte-nombre-postes-travail-dans-entite-entre-10-et-49"
+        order_index: 1
+      - text: "Entre 50 et 249"
+        identifier: "contexte-nombre-postes-travail-dans-entite-entre-50-et-249"
+        order_index: 2
+      - text: "Plus de 250"
+        identifier: "contexte-nombre-postes-travail-dans-entite-plus-de-250"
+        order_index: 3
+
+  - label: "contexte-activites-recherche-et-developpement"
+    text: "Estimez-vous que votre entité, du fait de ses activités, puisse faire l'objet d'espionnage industriel ou de vol de données ciblé ?"
+    question_type: "single_choice"
+    weight: 0
+    active_status: true
+    categories:
+      - "Contexte"
+    tooltip_content: |
+      <div>
+        <h5>Attaque ciblée</h5>
+        <p>Si oui, des questions additionnelles liées à la maîtrise des accès utilisateurs et à la sécurisation des données jugées sensibles seront abordées.</p>
+        <p>Exemples d'informations et de données pouvant être faire l'objet d'une attaque ciblée : secrets industriels, R&D, brevets, données commerciales jugées vitales pour l'activité de l'entité, vol des données en interne, données clients confidentielles.</p>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "contexte-activites-recherche-et-developpement-nsp"
+        order_index: 0
+      - text: "Non"
+        identifier: "contexte-activites-recherche-et-developpement-non"
+        order_index: 1
+        rule_data:
+          reponses:
+            - question_label: "acces-liste-compte-utilisateurs"
+              answer_option_identifier: "acces-liste-compte-utilisateurs-na"
+            - question_label: "acces-droits-acces-utilisateurs-limites"
+              answer_option_identifier: "acces-droits-acces-utilisateurs-limites-na"
+            - question_label: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles"
+              answer_option_identifier: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles-na"
+            - question_label: "securite-poste-r-et-d-disques-chiffres"
+              answer_option_identifier: "securite-poste-r-et-d-disques-chiffres-na"
+            - question_label: "securite-infrastructure-acces-wifi-securises"
+              answer_option_identifier: "securite-infrastructure-acces-wifi-securises-na"
+            - question_label: "securite-infrastructure-espace-stockage-serveurs"
+              answer_option_identifier: "securite-infrastructure-espace-stockage-serveurs-na"
+            - question_label: "sensibilisation-risque-espionnage-industriel-r-et-d"
+              answer_option_identifier: "sensibilisation-risque-espionnage-industriel-r-et-d-na"
+      - text: "Oui"
+        identifier: "contexte-activites-recherche-et-developpement-oui"
+        order_index: 2
+
+  - label: "contexte-opere-systemes-information-industriels"
+    text: "Votre entité opère-t-elle des systèmes industriels ?"
+    question_type: "single_choice"
+    weight: 0
+    active_status: true
+    categories:
+      - "Contexte"
+    tooltip_content: |
+      <div>
+        <h5>Systèmes industriels</h5>
+        <p>Si oui, des questions dédiées à la sécurité des systèmes industriels seront abordées.</p>
+        <p>Exemples de systèmes industriels : objet ou machine industrielle connectée, automates programmables, systèmes numériques de contrôle-commande, systèmes instrumentés de sécurité, capteurs et actionneurs, bus de terrain, logiciels de supervision et de contrôle SCADA, logiciels de gestion de production assistée par ordinateur (GPAO, GMAO, MES), logiciels d'ingénierie et de maintenance, systèmes embarqués, Gestion Technique Centralisée (GTC), Gestion Technique du Bâtiment (GTB), équipements biomédicaux, etc.</p>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "contexte-opere-systemes-information-industriels-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "contexte-opere-systemes-information-industriels-non"
+        order_index: 2
+        rule_data:
+          reponses:
+            - question_label: "gouvernance-schema-si-industriel-a-jour"
+              answer_option_identifier: "gouvernance-schema-si-industriel-a-jour-na"
+            - question_label: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres"
+              answer_option_identifier: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres-na"
+            - question_label: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees"
+              answer_option_identifier: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees-na"
+            - question_label: "securite-poste-si-industriel-antivirus-deploye"
+              answer_option_identifier: "securite-poste-si-industriel-antivirus-deploye-na"
+            - question_label: "securite-infrastructure-si-industriel-pare-feu-deploye"
+              answer_option_identifier: "securite-infrastructure-si-industriel-pare-feu-deploye-na"
+      - text: "Oui"
+        identifier: "contexte-opere-systemes-information-industriels-oui"
+        order_index: 3
+
+  - label: "contexte-cyber-attaque-subie"
+    text: "Avez-vous déjà subi une cyberattaque ?"
+    question_type: "single_choice"
+    weight: 0
+    active_status: true
+    categories:
+      - "Contexte"
+    tooltip_content: |
+      <div>
+        <h5>Statistiques anonymes</h5>
+        <p>Attention, bien préciser à l'entité que cette question est utile à des fins de statistiques anonymisées. Aucune action ne sera menée si jamais elle n'a pas déposé plainte suite à une cyberattaque.</p>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "contexte-cyber-attaque-subie-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "contexte-cyber-attaque-subie-non"
+        order_index: 2
+      - text: "Oui"
+        identifier: "contexte-cyber-attaque-subie-oui"
+        order_index: 3
+        triggered_questions:
+          - label: "contexte-cyber-attaque-subie-oui-tiroir-type"
+            text: "Si oui, de quel type ?"
+            question_type: "multiple_choice"
+            weight: 0
+            active_status: true
+            answer_options:
+              - text: "Compromission d'un poste, d'une boîte mail ou d'un compte Cloud"
+                identifier: "contexte-cyber-attaque-subie-oui-tiroir-type-compromission"
+                order_index: 0
+              - text: "Usurpation d'identité"
+                identifier: "contexte-cyber-attaque-subie-oui-tiroir-type-usurpation"
+                order_index: 1
+              - text: "Rançongiciel ou autre maliciel sur plusieurs postes"
+                identifier: "contexte-cyber-attaque-subie-oui-tiroir-type-rancongiciel"
+                order_index: 2
+              - text: "Compromission d'un ou plusieurs accès distants"
+                identifier: "contexte-cyber-attaque-subie-oui-tiroir-type-acces"
+                order_index: 3
+              - text: "Compromission d'un ou plusieurs services web"
+                identifier: "contexte-cyber-attaque-subie-oui-tiroir-type-web"
+                order_index: 4
+              - text: "Compromission d'un serveur ou service exposé sur internet"
+                identifier: "contexte-cyber-attaque-subie-oui-tiroir-type-serveur"
+                order_index: 5
+              - text: "Compromission d'un ou plusieurs équipements réseaux"
+                identifier: "contexte-cyber-attaque-subie-oui-tiroir-type-reseaux"
+                order_index: 6
+              - text: "Compromission indirecte via un prestataire ou un partenaire"
+                identifier: "contexte-cyber-attaque-subie-oui-tiroir-type-compromission-indirecte"
+                order_index: 7
+              - text: "Malveillance interne"
+                identifier: "contexte-cyber-attaque-subie-oui-tiroir-type-malveillance"
+                order_index: 8
+          - label: "contexte-cyber-attaque-subie-tiroir-plainte"
+            text: "Si Oui : avez-vous déposé plainte ou réalisé un signalement auprès d'un service judiciaire ?"
+            question_type: "single_choice"
+            weight: 0
+            active_status: true
+            answer_options:
+              - text: "Je ne sais pas"
+                identifier: "contexte-cyber-attaque-subie-tiroir-plainte-nsp"
+                order_index: 0
+              - text: "Non"
+                identifier: "contexte-cyber-attaque-subie-tiroir-plainte-non"
+                order_index: 1
+              - text: "Oui"
+                identifier: "contexte-cyber-attaque-subie-tiroir-plainte-oui"
+                order_index: 2
+

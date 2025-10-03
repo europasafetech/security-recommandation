@@ -1,0 +1,419 @@
+questions:
+  - label: "acces-outil-gestion-des-comptes"
+    text: "Un outil de gestion des comptes et des politiques de sécurité centralisé (ex : Active Directory, Samba-AD, Entra ID, scripts d'administration automatisés, etc.) est-il mis en œuvre ?"
+    question_type: "single_choice"
+    weight: 0.5
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Entités publiques</h5>
+        <p>Les entités publiques sont éligibles au service gratuit ADS de l'ANSSI qui permet d'analyser le niveau de sécurité de l'annuaire centralisé. Pour y accéder, l'entité est invitée à s'orienter vers le service ANSSI https://club.ssi.gouv.fr/</p>
+      </div>
+      <div>
+        <h5>Active Directory, Samba-AD</h5>
+        <p>À partir d'un parc informatique d'une dizaine de postes, il est fortement recommandé de s'appuyer sur une solution de type Active Directory ou Samba-AD, et de ne plus s'appuyer sur un réseau en "Workgroup" afin d'homogénéiser le niveau de sécurité des postes de travail.</p>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "acces-outil-gestion-des-comptes-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "acces-outil-gestion-des-comptes-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "acces-outil-gestion-des-comptes-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "acces-outil-gestion-des-comptes"
+            niveau: 1
+      - text: "Oui"
+        identifier: "acces-outil-gestion-des-comptes-oui"
+        order_index: 3
+        indice: 3.0
+        triggered_security_measures:
+          - identifier: "acces-outil-gestion-des-comptes"
+            niveau: 2
+
+  - label: "acces-liste-compte-utilisateurs"
+    text: "La liste des comptes utilisateurs (prestataires inclus) est-elle maintenue à jour ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Accès et comptes prioritaires</h5>
+        <p>Les accès et comptes utilisateurs à maitriser en priorité sont ceux permettant d'ouvrir une session sur le poste de travail et ceux permettant d'accéder aux données jugées les plus sensibles. Selon les cas, ces accès et comptes sont gérés via un Active Directory et/ou un service Cloud et/ou applicatif(s) métier(s).</p>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "acces-liste-compte-utilisateurs-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "acces-liste-compte-utilisateurs-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "acces-liste-compte-utilisateurs-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "acces-liste-compte-utilisateurs"
+            niveau: 1
+      - text: "Les comptes des utilisateurs et leurs accès sont régulièrement revus (ex : liste du personnel vs liste des comptes)"
+        identifier: "acces-liste-compte-utilisateurs-revue-reguliere"
+        order_index: 3
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "acces-liste-compte-utilisateurs"
+            niveau: 2
+      - text: "La liste des comptes des utilisateurs est mise à jour en continu dans le cadre d'un processus de désactivation systématique des comptes inactifs. Une revue annuelle est également réalisée"
+        identifier: "acces-liste-compte-utilisateurs-revue-en-continu"
+        order_index: 4
+        indice: 3.0
+
+  - label: "acces-droits-acces-utilisateurs-limites"
+    text: "Les droits des utilisateurs sont-ils limités à leurs besoins métiers ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Accès et comptes prioritaires</h5>
+        <p>Les accès et comptes utilisateurs à maitriser en priorité sont ceux permettant d'ouvrir une session sur le poste de travail et ceux permettant d'accéder aux données jugées les plus sensibles. Selon les cas, ces accès et comptes sont gérés via un Active Directory et/ou un service Cloud et/ou applicatif(s) métier(s).</p>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "acces-droits-acces-utilisateurs-limites-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "acces-droits-acces-utilisateurs-limites-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "acces-droits-acces-utilisateurs-limites-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "acces-droits-acces-utilisateurs-limites"
+            niveau: 1
+      - text: "Des restrictions d'accès à certaines données sont ponctuellement mises en place"
+        identifier: "acces-droits-acces-utilisateurs-limites-restrictions-ponctuelles"
+        order_index: 3
+        indice: 1.0
+        triggered_security_measures:
+          - identifier: "acces-droits-acces-utilisateurs-limites"
+            niveau: 2
+      - text: "L'accès des utilisateurs aux données, aux systèmes et aux applications sont limités aux seuls accès nécessaires à leur activité"
+        identifier: "acces-droits-acces-utilisateurs-limites-restrictions-limitees"
+        order_index: 4
+        indice: 3.0
+
+  - label: "acces-utilisateurs-administrateurs-poste"
+    text: "Les utilisateurs sont-ils administrateurs de leur poste ?"
+    question_type: "single_choice"
+    weight: 3
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Administration locale des postes</h5>
+        <p>Cette question traite du privilège d'administration local des comptes utilisateurs sur leur poste de travail, il permet par exemple aux utilisateurs d'être autonome dans l'installation d'applications et la configuration de leur machine.</p>
+        <p>Si le personnel est autorisé à utiliser son matériel personnel (BYOD) pour travailler et accéder aux systèmes d'information de l'entité, nous vous invitons à cocher "Oui".</p>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "acces-utilisateurs-administrateurs-poste-nsp"
+        order_index: 0
+      - text: "Oui, les comptes d'accès des utilisateurs disposent des privilèges d'administration du poste de travail"
+        identifier: "acces-utilisateurs-administrateurs-poste-oui"
+        order_index: 1
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "acces-utilisateurs-administrateurs-poste"
+            niveau: 1
+      - text: "La suppression de ce privilège est en cours de traitement, plusieurs utilisateurs sont toujours administrateurs de leur poste"
+        identifier: "acces-utilisateurs-administrateurs-poste-suppression-privilege-en-cours"
+        order_index: 2
+        indice: 1.0
+        triggered_security_measures:
+          - identifier: "acces-utilisateurs-administrateurs-poste"
+            niveau: 1
+      - text: "Non, et les rares exceptions sont justifiées"
+        identifier: "acces-utilisateurs-administrateurs-poste-non-exceptions-justifiees"
+        order_index: 3
+        indice: 3.0
+
+  - label: "acces-mesures-securite-robustesse-mdp"
+    text: "Des exigences de complexité sont-elles imposées sur les mots de passe de session des utilisateurs ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Mots de passe</h5>
+        <div>Exigences minimales acceptables :
+          <ul>
+            <li>Longueur de mots de passe à minima de 12 caractères si compte non administrateur local</li>
+            <li>Longueur de mots de passe à minima de 16 caractères si compte administrateur local</li>
+            <li>Construction complexe avec par ex l'utilisation de minuscules, majuscules, chiffres et caractères spéciaux</li>
+            <li>1 renouvellement annuel des mots de passe, et lors d'une suspicion d'une cyberattaque</li>
+          </ul>
+        </div>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "acces-mesures-securite-robustesse-mdp-nsp"
+        order_index: 0
+      - text: "Non"
+        identifier: "acces-mesures-securite-robustesse-mdp-non"
+        order_index: 1
+      - text: "Des contraintes en matière de sécurité des mots de passe sont exigées par défaut pour l'accès des utilisateurs à leur compte"
+        identifier: "acces-mesures-securite-robustesse-mdp-contraintes-par-defaut"
+        order_index: 2
+        indice: 3.0
+
+  - label: "acces-administrateurs-informatiques-suivie-et-limitee"
+    text: "La liste des comptes des administrateurs informatiques (prestataires inclus) est-elle suivie et limitée au strict nécessaire ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Comptes d'administration</h5>
+        <p>NB : cette question traite des comptes d'administration systèmes sur les serveurs, infrastructures etc. L'administration locale des postes de travail est traitée dans la question sur les utilisateurs administrateurs de leurs postes</p>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "acces-administrateurs-informatiques-suivie-et-limitee-nsp"
+        order_index: 0
+      - text: "Non"
+        identifier: "acces-administrateurs-informatiques-suivie-et-limitee-non"
+        order_index: 1
+      - text: "Les comptes des administrateurs sont régulièrement revus (ex : liste du personnel vs liste des comptes)"
+        identifier: "acces-administrateurs-informatiques-suivie-et-limitee-revue-reguliere"
+        order_index: 2
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "acces-administrateurs-informatiques-suivie-et-limitee"
+            niveau: 2
+      - text: "La liste des comptes des administrateurs est mise à jour en continu dans le cadre d'un processus de désactivation systématique des comptes inactifs. Une revue annuelle est également réalisée"
+        identifier: "acces-administrateurs-informatiques-suivie-et-limitee-revue-continue"
+        order_index: 3
+        indice: 3.0
+
+  - label: "acces-utilisation-comptes-administrateurs-droits-limitee"
+    text: "L'utilisation des comptes administrateurs est-elle bien limitée aux tâches d'administration ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Comptes d'administration</h5>
+        <div>NB : cette question traite des comptes d'administration systèmes sur les serveurs, infrastructures etc. L'administration locale des postes de travail est traitée dans la question sur les utilisateurs administrateurs de leurs postes.</div>
+        <div>Exemple de restrictions :
+          <ul>
+            <li>Tous les administrateurs utilisent en parallèle un compte utilisateur sans privilèges pour les usages du quotidien (ex : surf sur internet, messagerie, etc.)</li>
+            <li>1 seul compte administrateur du domaine</li>
+            <li>Le compte administrateur du domaine n'est utilisé qu'exceptionnellement</li>
+            <li>Le compte d'administration de la solution de sauvegarde différent n'est pas géré via l'annuaire centralisé (ex : Active Directory, Samba-AD)</li>
+          </ul>
+        </div>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "acces-utilisation-comptes-administrateurs-droits-limitee-nsp"
+        order_index: 0
+      - text: "Non, des utilisateurs disposent de privilèges d'administration sans restriction particulière"
+        identifier: "acces-utilisation-comptes-administrateurs-droits-limitee-non"
+        order_index: 1
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "acces-utilisation-comptes-administrateurs-droits-limitee"
+            niveau: 1
+      - text: "La mise à disposition des comptes d'administration fait l'objet de quelques restrictions"
+        identifier: "acces-utilisation-comptes-administrateurs-droits-quelques-restrictions"
+        order_index: 2
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "acces-utilisation-comptes-administrateurs-droits-limitee"
+            niveau: 2
+      - text: "Tous les comptes administration sont justifiés, et dédiés aux seules tâches d'administration"
+        identifier: "acces-utilisation-comptes-administrateurs-droits-justifies"
+        order_index: 3
+        indice: 3.0
+
+  - label: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles"
+    text: "L'accès des utilisateurs aux ressources et données les plus sensibles fait-il l'objet de mesures de sécurité additionnelles ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Données sensibles</h5>
+        <div>Nous vous invitons à vous focaliser sur les ressources et données qui étaient jugées prioritaires lors de la question sur les informations et activités à protéger.</div>
+        <div>Exemples de mesures acceptables :
+          <ul>
+            <li>Contraintes renforcées de robustesse et de longueur de mots de passe (16 caractères minimum)</li>
+            <li>Authentification multifacteur</li>
+            <li>Protection des données dans un conteneur chiffré "à froid" et lors d'un transfert via Internet (ex : mail)</li>
+            <li>Utilisation d'une solution de Data Loss Prevention permettant de limiter les fuites de données</li>
+          </ul>
+        </div>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles"
+            niveau: 1
+      - text: "Oui, des mesures renforçant l'accès à ces données ont été mises en œuvre"
+        identifier: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles-oui-mesures-authentification-renforcees"
+        order_index: 3
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles"
+            niveau: 2
+      - text: "Oui, des mesures renforçant l'accès à ces données ont été mises en œuvre et les données sont chiffrées"
+        identifier: "acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles-oui-mesures-authentification-renforcees-et-donnees-chiffrees"
+        order_index: 4
+        indice: 3.0
+
+  - label: "acces-teletravail-acces-distants-mesures-particulieres"
+    text: "Le télétravail et les accès distants (cloud inclus) sont-ils protégés par une authentification multifacteur ?"
+    question_type: "single_choice"
+    weight: 2
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Authentification multifacteur</h5>
+        <div>Exemples de facteur d'authentification :
+          <ul>
+            <li>l'usage d'une carte à puce et d'un code PIN d'authentification ;</li>
+            <li>l'usage d'un token physique et d'un code PIN d'authentification ;</li>
+            <li>l'utilisation d'une application dédiée sur un smartphone idéalement professionnel (ex : Windows Authentificator, Twilio Authy, etc.), ou à défaut un code envoyé par sms idéalement sur un téléphone professionnel</li>
+          </ul>
+        </div>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "acces-teletravail-acces-distants-mesures-particulieres-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "acces-teletravail-acces-distants-mesures-particulieres-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "acces-teletravail-acces-distants-mesures-particulieres-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "acces-teletravail-acces-distants-mesures-particulieres"
+            niveau: 1
+      - text: "Certaines connexions à distance sont protégées par une authentification multifacteur"
+        identifier: "acces-teletravail-acces-distants-mesures-particulieres-mfa"
+        order_index: 3
+        indice: 1.0
+        triggered_security_measures:
+          - identifier: "acces-teletravail-acces-distants-mesures-particulieres"
+            niveau: 1
+      - text: "Toutes les connexions à distance sont protégées par une authentification multifacteur"
+        identifier: "acces-teletravail-acces-distants-mesures-particulieres-vpn"
+        order_index: 4
+        indice: 3.0
+
+  - label: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres"
+    text: "Les accès distants aux systèmes industriels sont-ils protégés par une authentification multifacteur ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    answer_options:
+      - text: "Non applicable"
+        identifier: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres"
+            niveau: 1
+      - text: "Certaines connexions à distance sont protégées par une authentification multifacteur"
+        identifier: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres-mfa"
+        order_index: 3
+        indice: 1.0
+        triggered_security_measures:
+          - identifier: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres"
+            niveau: 1
+      - text: "Toutes les connexions à distance sont protégées par une authentification multifacteur"
+        identifier: "acces-si-industriel-teletravail-acces-distants-mesures-particulieres-vpn"
+        order_index: 4
+        indice: 3.0
+
+  - label: "acces-administrateurs-si-mesures-specifiques"
+    text: "Les accès des administrateurs font-ils l'objet de mesures de sécurité renforcées ?"
+    question_type: "single_choice"
+    weight: 2
+    active_status: true
+    categories:
+      - "Sécurité des accès au système d'information"
+    tooltip_content: |
+      <div>
+        <h5>Authentification renforcée</h5>
+        <div>Pour répondre aux exigences de la réponse "Oui, des mesures renforçant l'authentification ont été mises en œuvre", l'entité doit appliquer au moins les premières mesures suivantes :
+          <ol>
+            <li>Modification des mots de passe par défaut</li>
+            <li>Contraintes renforcées de robustesse et de longueur de mots de passe (16 caractères minimum)</li>
+            <li>Stockage des mots de passes d'administration des services critiques (ex : annuaire centralisé, sauvegarde, messagerie) en dehors du système d'information (ex : feuille papier dans un meuble fermé à clef, coffre-fort, etc)</li>
+          </ol>
+        </div>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "acces-administrateurs-si-mesures-specifiques-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "acces-administrateurs-si-mesures-specifiques-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "acces-administrateurs-si-mesures-specifiques"
+            niveau: 1
+      - text: "Oui, des mesures renforçant l'authentification ont été mises en œuvre"
+        identifier: "acces-administrateurs-si-mesures-specifiques-oui-mesures-authentification-renforcees"
+        order_index: 3
+        indice: 1.5
+        triggered_security_measures:
+          - identifier: "acces-administrateurs-si-mesures-specifiques"
+            niveau: 2
+      - text: "Oui, des mesures renforçant l'authentification ont été mises en œuvre et des postes dédiés à l'administration sont utilisés"
+        identifier: "acces-administrateurs-si-mesures-specifiques-oui-mesures-authentification-renforcees-postes-dedies-administration"
+        order_index: 4
+        indice: 3.0

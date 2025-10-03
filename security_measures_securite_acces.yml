@@ -1,0 +1,296 @@
+---
+security_measures:
+  - identifier: acces-outil-gestion-des-comptes
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 14
+    level1_title: |
+      Mettre en œuvre un outil de gestion des politiques de sécurité centralisées (ex : Active Directory, Samba-AD) et en évaluer/améliorer son niveau de sécurité annuellement
+    level1_why_content: |
+      Un outil de ce type permet de faciliter le suivi et la gestion (création, modification, suppressions) des accès utilisateurs et administrateurs au travers d'une console d'administration les centralisant. Ces outils permettent également d'homogénéiser les exigences de sécurité et de les déployer massivement (restriction d'administration, restriction des connexions, gestion des mots de passe, configuration des postes de travail et des navigateurs).
+    level1_how_content: |
+      <p>Les principaux outils utilisés sont Active Directory (environnement sous Microsoft), Samba-AD (environnement sous Linux). Ces outils sont gratuits mais peuvent nécessiter un accompagnement extérieur, notamment dans l'optique d'en sécuriser leur paramétrage puisque la mise en place d'un tel outil induit de nouveaux risques de cybersécurité tel que la compromission de cet outil par un cyberattaquant pour faciliter son mode opératoire.</p>
+      <p>Pour les entités publiques, l'ANSSI met à disposition gratuitement son outil ADS/ORADAD de recherches de vulnérabilités via le service ANSSI https://club.ssi.gouv.fr/. Pour les entités privées, des outils gratuits tels que Purple Knight et Pingcastle. Les codes sources d'ADS/ORADAD sont également disponibles : <a href="https://github.com/ANSSI-FR/ORADAD">https://github.com/ANSSI-FR/ORADAD</a>.</p>
+      <p>Cette analyse doit être à minima menée une fois par an.</p>
+    level2_title: Contrôler régulièrement le niveau de sécurité de son outil de gestion de politiques de sécurité centralisé
+    level2_why_content: |
+      Si un tel outil est utilisé, il en devient le centre névralgique de la sécurité de l'environnement bureautique. Il induit ainsi de forts risques de cybersécurité tel que la compromission des comptes administrateurs par un cyberattaquant entraînant par conséquent une prise de contrôle instantanée et complète de tout le SI. Il convient donc de s'assurer de son niveau de sécurité, et ce de manière régulièrement, puisque les pratiques et les paramétrages des administrateurs peuvent engendrer l'apparition de nouvelles vulnérabilités.
+    level2_how_content: |
+      <p>Il est recommandé de mettre en œuvre un audit de sécurité de cet outil à minima une fois par an, voire tous les 6 mois pour les entités traitant des données à protéger en priorité.</p>
+      <p>Pour les entités publiques, l'ANSSI met à disposition gratuitement son outil ADS/ORADAD de recherche de vulnérabilités via le service ANSSI https://club.ssi.gouv.fr/. Pour les entités privées, des outils gratuits tels que Purple Knight et Pingcastle. Les codes sources d'ADS/ORADAD sont également disponibles : <a href="https://github.com/ANSSI-FR/ORADAD">https://github.com/ANSSI-FR/ORADAD</a>.</p>
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber ou référencé par un Campus Cyber, pour la mise en œuvre de cette mesure.</p>
+
+  - identifier: acces-liste-compte-utilisateurs
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 25
+    level1_title: Réaliser annuellement une revue des accès utilisateurs en les comparant avec les informations détenues par le service RH
+    level1_why_content: |
+      Lors d'une compromission, les cyberattaquants ont tendance à soit utiliser des accès utilisateurs dits « dormants » car inutilisés, soit en se créant un faux compte d'accès. Des revues régulières permettent donc d'assainir la base d'annuaire des accès, désactiver les comptes « dormants » et supprimer les comptes suspicieux.
+    level1_how_content: |
+      A minima une fois par an, un contrôle peut être réalisé en comparant avec l'inventaire du personnel détenu par le service RH et la liste des comptes informatiques créés dans l'annuaire. Les comptes en écart (ex : comptes en doublons, compte d'un ancien personnel, compte ne pouvant être attribué à aucune personne, etc.) par rapport à la liste fournie par le service RH doivent être désactivés. Une analyse similaire doit être menée sur les comptes fournis aux prestataires et partenaires. Les mots de passes des comptes partagés concernés par un départ sont à renouveler.
+      
+      <p>NB : si un ou plusieurs comptes suspects sont présents, c'est un signe important de compromission et des investigation supplémentaires devraient être menées (afin de déterminer : depuis quand, les activités de ce compte suspect, comment il a été créé)</p>
+    level2_title: Définir avec le service RH des processus de « circuit arrivée » et « circuit départ » assurant les créations et les désactivations des comptes utilisateurs
+    level2_why_content: |
+      Les entités subissent un fort turnover de personnel. Des créations et désactivations de comptes utilisateurs manuelles et non systématisées peuvent générer des oublis ou des erreurs qui sont autant de vulnérabilités pour le système d'information.
+    level2_how_content: |
+      <p>Il est recommandé de définir avec le service RH des processus de « circuit arrivée » et « circuit départ » permettant d'assurer de manière systématique les créations et les désactivations des comptes utilisateurs.</p>
+      <p>Ceux-ci peuvent inclure par exemple :</p>
+      <ul>
+        <li>Une liste de vérification type « check-list » des comptes à créer/supprimer partagée entre les équipes RH et informatique</li>
+        <li>Une procédure de validation de l'arrivée/départ entre les équipes RH et informatique</li>
+        <li>Un délai de traitement de la demande</li>
+        <li>Une procédure de traitement de l'urgence (ex : départ conflictuel)</li>
+      </ul>
+
+  - identifier: acces-droits-acces-utilisateurs-limites
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 31
+    level1_title: Restreindre l'accès aux données à protéger en priorité aux seules personnes autorisées à y accéder
+    level1_why_content: |
+      Il est nécessaire de limiter les autorisations d'accès aux données et applications métiers, notamment celles à protéger en priorité, afin de limiter le risque de vol et de sabotage en cas de compromission sur le système d'information. La probabilité d'un risque d'atteinte à ces données sera donc limitée aux seuls utilisateurs ayant accès à celles-ci, et non à l'ensemble des collaborateurs si aucune restriction n'est mise en place.
+    level1_how_content: |
+      Avant de paramétrer ces restrictions, il est conseillé d'établir un tableau répertoriant la liste des utilisateurs légitimes nécessitant un accès en fonction des systèmes et/ou applications et/ou données à protéger en priorité. Ce tableau pourra ensuite être communiqué à l'équipe informatique (ou prestataire) pour l'implémenter dans les applications et systèmes concernés.
+    level2_title: |
+      Pour les systèmes et applications à protéger en priorité, définir et gérer les utilisateurs selon 2 niveaux de privilèges distincts : 1 niveau "accès complet" et 1 niveau "accès restreint"
+    level2_why_content: |
+      Cette mesure permet de réduire le risque de vol et de sabotage en cas de compromission d'un compte utilisateur ayant accès aux données à protéger en priorité. Elle permet également de réduire le risque d'erreurs de manipulation.
+    level2_how_content: |
+      <p>En fonction des données et systèmes à protéger en priorité, il est recommandé de définir deux niveaux de privilèges :</p>
+      <ul>
+        <li>Un niveau « accès complet » offrant toutes les fonctionnalités (lecture, écriture, suppression)</li>
+        <li>Un niveau « accès restreint » offrant des fonctionnalités limitées (exemple : lecture seule, impossibilité de supprimer, etc.)</li>
+      </ul>
+      <p>Pour chaque utilisateur, selon son rôle métier et ses besoins, attribuer le niveau le plus restrictif permettant de couvrir l'ensemble de ses activités.</p>
+
+  - identifier: acces-administrateurs-informatiques-suivie-et-limitee
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 29
+    level1_title: Réaliser tous les 6 mois une revue des accès administrateurs en les comparant avec les informations détenues par le service RH
+    level1_why_content: |
+      Lors d'une cyberattaque, les cyberattaquants ont tendance à chercher à prendre la main et compromettre un ou plusieurs administrateurs. Soit en compromettant des accès administrateurs dits « dormants » car inutilisés, soit en se créant un faux compte administrateurs suite à la compromission d'un 1er compte administrateur (ex : faible robustesse du mot de passe, compromission d'un poste administrateur, défaut de mise à jour). Des revues régulières permettent de gagner en maitrise sur ses accès administrateurs, assainir et réduire la liste des comptes administrateurs, désactiver les comptes « dormants » et supprimer les comptes suspicieux.
+      
+      <p>NB : si un ou plusieurs comptes suspects sont présents, c'est un signe important de compromission et des investigation supplémentaires devraient être menées (afin de déterminer : depuis quand, les activités de ce compte suspect, comment il a été créé)</p>
+    level1_how_content: |
+      A minima une fois tous les 6 mois, sur la base d'un inventaire, un contrôle peut être réalisé en établissant la liste des comptes administrateurs (prestataires inclus) en précisant leur périmètre. Pour chacun de ces comptes administrateur, il est nécessaire d'en justifier et confirmer l'intérêt opérationnel, les accès en écart (ex : accès en doublons, accès d'un ancien salarié, accès inutiles) doivent être désactivés et les mots de passes des comptes partagés concernés par un départ sont à renouveler.
+    level2_title: Définir avec les administrateurs des processus de « circuit arrivée » et « circuit départ » assurant les créations et les désactivations des comptes administrateurs
+    level2_why_content: |
+      Les entités peuvent subir un fort turnover de prestataires et d'administrateurs. Des créations et désactivations de comptes administrateurs manuelles et non systématisées peuvent générer des oublis ou des erreurs qui sont autant de vulnérabilités critiques pour le système d'information.
+    level2_how_content: |
+      <p>Il est recommandé de définir avec l'équipe informatique et les administrateurs des processus de « circuit arrivée » et « circuit départ » permettant d'assurer de manière systématique les créations et les désactivations des comptes administrateurs.</p>
+      <p>Ceux-ci peuvent inclure par exemple :</p>
+      <ul>
+        <li>Une liste de vérification type « check-list » des comptes administrateurs à créer/supprimer</li>
+        <li>Une procédure de validation de l'arrivée/départ d'administrateur</li>
+        <li>Un délai de traitement de la demande</li>
+        <li>Une procédure de traitement de l'urgence (ex : départ conflictuel d'un prestataire)</li>
+        <li>Un processus de renouvellement des mots de passe des comptes partagés concernés par un départ</li>
+      </ul>
+
+  - identifier: acces-utilisation-comptes-administrateurs-droits-limitee
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 11
+    level1_title: Utiliser des comptes d'administration dédiés à cet usage
+    level1_why_content: |
+      Les comptes d'administrations sont des comptes à hauts privilèges c'est pourquoi ils sont très ciblés par les cyberattaquants. Si un de ces comptes est compromis, un cyberattaquant est en mesure de réaliser une compromission massive rapidement. Il convient donc d'en limiter leur usage. Si un administrateur utilise un seul compte pour ses tâches bureautiques et ses tâches d'administration et que ce compte est compromis, l'attaquant dispose directement des privilèges d'administration. Si un administrateur dispose de 2 comptes en séparant ses usages, 1 compte "bureautique" utilisé pour les tâches bureautiques et 1 compte administrateur utilisé pour les tâches d'administration ; alors le compte le plus exposé le compte "bureautique") pourrait être compromis sans que l'attaquant obtiennent directement les privilèges d'administration. En plus, de la compromission du compte "bureautique", l'attaquant devra réaliser d'autres actions malveillantes pour obtenir les privilèges administrateur de la personne. Il s'agit donc d'une mesure de protection des privilèges d'administration et de réduction de l'impact de la compromission.
+      
+      <p>NB: cette mesure est rendue caduque notamment par situations suivantes : le compte utilisation est "administrateur local" de son poste, le compte administrateur est utilisé pour la consultation Internet et la messagerie électronique, les mots de passe des deux comptes sont identiques.</p>
+      
+      <p>La séparation des comptes d'administration de l'annuaire centralisé (ex: Active Directory, Samba-AD, etc.) et des sauvegardes (ou de la plateforme de virtualisation), relève de la même logique. Elle vise a protéger, en dernier recours, les sauvegardes.</p>
+    level1_how_content: |
+      <p>Il faut dans un premier temps s'assurer de la création d'un compte utilisateur (sans privilèges d'administration) pour chacun des administrateurs. Ces comptes utilisateurs, via une authentification spécifique, devront être alors utilisés pour l'accès à l'internet, aux boites mails et aux fonctionnalités d'ordre administratif et bureautique.</p>
+      <p>Les comptes administrateurs, via une authentification spécifique, seront alors utilisés pour les opérations de maintenance informatique, administration des services, gestion des sauvegardes, gestion des utilisateurs et des accès, de paramétrage des systèmes et des applications, etc.</p>
+      <p>Il est également recommandé d'utiliser 2 autres comptes administrateurs distincts (et une authentification spécifique) : 1 seul compte pour gérer l'administration de l'outil de gestion centralisée de politiques de sécurité (exemple : Active Directory, Samba-AD) et 1 seul compte pour gérer la solution de sauvegarde (NB : ce compte ne doit pas être non géré via l'outil de gestion centralisée de politiques de sécurité).</p>
+      <p>Par ailleurs le compte d'administrateur du domaine ne doit être utilisé que de manière exceptionnelle (ex: migration, gestion des relations d'approbation, etc.). Le mot de passe de ce compte doit être stocké dans un coffre-fort.</p>
+    level2_title: Utiliser des comptes d'administration distincts selon les périmètres d'administration
+    level2_why_content: |
+      Cette mesure permet de réduire l'impact d'une compromission d'un compte d'administration en limitant son périmètre d'action. Si un cyberattaquant compromet un compte d'administration avec un périmètre restreint, il ne pourra pas immédiatement étendre son attaque à l'ensemble du système d'information.
+    level2_how_content: |
+      <p>Il est recommandé de créer des comptes d'administration distincts selon les périmètres :</p>
+      <ul>
+        <li>Administration du domaine (Active Directory/Samba-AD)</li>
+        <li>Administration des sauvegardes</li>
+        <li>Administration des systèmes (serveurs)</li>
+        <li>Administration du réseau</li>
+        <li>Administration des bases de données</li>
+        <li>Administration des applications métiers</li>
+      </ul>
+      <p>Chaque administrateur ne dispose que des comptes correspondant à son périmètre d'intervention.</p>
+
+  - identifier: acces-utilisateurs-administrateurs-poste
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 7
+    level1_title: Limiter drastiquement le nombre d'utilisateurs disposant du privilège d'administration local sur leur machine
+    level1_why_content: |
+      Lorsqu'un utilisateur est « administrateur » de son poste, il dispose d'un compte lui permettant de modifier la configuration du poste. Ainsi, un logiciel malveillant exécuté par l'utilisateur (par erreur et/ou à son insu) dispose directement de privilèges élevés sur le poste (les privilèges « administrateur » permettant de modifier la configuration). Le logiciel malveillant pourra alors notamment se rendre « persistant » (un logiciel malveillant est persistant quand il est capable de se redémarrer lui-même même après un redémarrage électrique du poste) ou désactiver les fonctions de sécurité du poste afin de se rendre indétectable (désactivation de l'antivirus, de l'EDR, modification des paramètres de journalisation) ou de faciliter la latéralisation (étape d'une attaque au cours de laquelle l'attaquant étend son emprise sur plusieurs équipements) en désactivant par exemple le pare-feu local. Dans certains de cas de compromission, il a aussi été constaté que le mot de passe du compte administrateur local était commun à toutes les machines ce qui facilite la latéralisation (du point de vue de l'attaquant).
+      
+      <p>La situation est la même lorsqu'une personne utilise ses périphériques personnels (ordinateurs, smartphone, etc.) pour se connecter aux ressources professionnelles, en ajoutant les risques liés à l'utilisation du poste par les cercles familiaux et amicaux (par exemple: un enfant pourrait faire un usage inconsidéré des privilèges d'administration pour installer une version gratuite d'un jeu vidéo qui contiendrait un cheval de Troie)</p>
+    level1_how_content: |
+      <p>Par défaut, il est recommandé de créer aux utilisateurs de comptes utilisateurs ne disposant pas de privilège d'administration. Les utilisateurs souhaitant ce privilège doivent les justifier et utiliser un compte distinct dédié à cet usage. Par conséquent, seuls les administrateurs chargés de l'administration des postes doivent disposer de ces droits lors de leurs interventions.</p>
+      <p>Dans un environnement Microsoft, il est recommandé d'étudier la mise en œuvre de "Just Enough and Just In Time Administration" https://learn.microsoft.com/fr-fr/shows/windowsserver/just-enough-just-in-time-administration-in-windows-server-2016 et de LAPS : https://learn.microsoft.com/fr-fr/defender-for-identity/security-assessment-laps</p>
+      <p>La mise à disposition d'un magasin étoffé d'applications « store d'application » validées par l'entité permettra de répondre à la majorité des besoins d'installation des utilisateurs.</p>
+      <p>Il est également fortement déconseillé d'utiliser des postes personnels pour se connecter aux réseaux et données de l'entité. Si cela ne peut être évité, il convient de sensibiliser les utilisateurs sur les risques liés à cet usage voire de les responsabiliser en les engageant à respecter des bonnes pratiques au travers d'une charte informatique.</p>
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber ou référencé par un Campus Cyber, pour la mise en œuvre de cette mesure.</p>
+
+  - identifier: acces-mesures-securite-robustesse-mdp
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 19
+    level1_title: Fixer des critères de longueur et complexité des mots de passe et encourager l'usage d'un coffre-fort de mots de passe
+    level1_why_content: |
+      Cette mesure permet de diminuer le risque de découverte et d'usurpation de mots de passe par des acteurs malveillants, par exemple, en testant de manière automatique (attaque par force brute) de nombreux mots de passe sur la base de mots de dictionnaires, à la recherche de mots de passe simples à découvrir.
+
+      Si un attaquant a réussi à compromettre un des ordinateurs du réseau, la mise en œuvre de mots de passe robustes sur l'ensemble des comptes permet de limiter le risque que cet attaquant compromettre d'autres comptes en découvrant leur mots de passe (réduction de l'impact de l'attaque)
+
+      Les personnes soumises à des contraintes trop fortes (ex : renouvellement fréquent) auront la fâcheuse tendance à utiliser un même mot de passe pour s'authentifier sur plusieurs services ou comptes différents, ce qui représente une pratique à hauts risques. Un coffre-fort de mots de passe permet de stocker des mots de passe sans que l'utilisateur ait besoin de les mémoriser. Les coffres-forts de mots de passe offrent également la possibilité de générer automatiquement des mots de passe robustes. Ces mots de passe sont alors conservés dans une base de données dédiée et chiffrée par un mot de passe dit « maître », le seul qui doit alors être mémorisé par l'utilisateur.
+    level1_how_content: |
+      Des exigences sur la création des mots de passe peuvent être implémentées via l'outil de gestion centralisée de politiques de sécurité (exemple : Active Directory, Samba-AD). Par défaut, utiliser au moins la règle de force de mot de passe suivante :
+      <ul>
+        <li>Nombre de caractères : 12 caractères minimum, idéalement 16</li>
+        <li>Caractères spéciaux : au moins une minuscule, au moins une majuscule, au moins un chiffre, au moins un caractère spécial de la liste suivante : #?!@$%^&*-'+_()[]. Au-delà de 20 caractères, il peut être envisageable d'enlever les contraintes sur les caractères spéciaux.</li>
+      </ul>
+      
+      <p>Lors de la création d'un mot de passe, éviter les mots du dictionnaire, les suites de lettres, les suites de chiffre, les dates, les informations personnelles (nom, prénom, date de naissance). Un renouvellement trop fréquent n'est pas recommandé. Il vaut mieux privilégier un changement des mots de passe en cas de suspicion ou bien de manière annuelle.</p>
+      
+      <p>Les deux outils suivants peuvent être recommandés aux utilisateurs ou administrateurs :</p>
+      <ul>
+        <li>L'outil de la CNIL permettant de créer un mot de passe robuste : <a href="https://www.cnil.fr/fr/verifier-sa-politique-de-mots-de-passe">Vérifier sa politique de mots de passe | CNIL</a></li>
+        <li>L'outil de l'ANSSI pour calculer la « force » d'un mot de passe : <a href="https://www.ssi.gouv.fr/administration/precautions-elementaires/calculer-la-force-dun-mot-de-passe/">Calculer la « force » d'un mot de passe | Agence nationale de la sécurité des systèmes d'information</a></li>
+      </ul>
+      
+      <p>Si nécessaire, il est conseillé de poursuivre les actions de communication et de promotion des coffres fort de mot de passe.</p>
+    level2_title: Mettre à disposition des utilisateurs une coffre fort de mots de passe et les former régulièrement à la création de mots de passe robustes
+    level2_why_content: |
+      Cette mesure permet de diminuer le risque de découverte et d'usurpation de mots de passe par des acteurs malveillants, par exemple, en testant de nombreux mots de passe sur la base de mots de dictionnaires, à la recherche de mots de passe simples à découvrir.
+    level2_how_content: |
+      <p>Il est recommandé de déployer et de mettre à disposition des utilisateurs un coffre-fort de mots de passe au niveau de l'entité (solutions commerciales ou solutions gratuites type KeePass, Bitwarden, etc.).</p>
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber ou référencé par un Campus Cyber, pour la mise en œuvre de cette mesure.</p>
+      <p>Il est également recommandé de mener régulièrement des sessions de sensibilisation et formation à la création de mots de passe robustes auprès des utilisateurs.</p>
+
+  - identifier: acces-utilisateurs-donnees-sensibles-mesures-securite-additionnelles
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 34
+    level1_title: Protéger de manière spéficique les données jugées sensibles
+    level1_why_content: |
+      En cas de compromission d'un ou plusieurs postes de travail, la mise en œuvre des mesures supplémentaires de sécurisation des accès aux systèmes, applications et données à protéger en priorité permet d'en limiter les risques d'espionnage et d'exfiltration.
+    level1_how_content: |
+      Cette mesure peut inclure la mise en oeuvre de plusieurs bonnes pratiques :
+      <ul>
+        <li>Contraintes renforcées de robustesse et de longueur de mots de passe (idéalement 16 caractères)</li>
+        <li>Utilisation d'un mécanisme d'authentification multifacteur</li>
+        <li>Utilisation d'une solution de Data Loss Prevention permettant de limiter les fuites de données</li>
+      </ul>
+      
+      <p>Les contraintes renforcées sur les mots de passe peuvent être implémentées via l'outil de gestion centralisée de politiques de sécurité (exemple : Active Directory, Samba-AD).</p>
+    level2_title: Mettre en place des mesures additionnelles de sécurisation des données jugées sensibles
+    level2_why_content: |
+      Pour les données les plus sensibles de l'entité, des mesures additionnelles de sécurisation permettent de réduire encore davantage les risques d'espionnage et d'exfiltration, notamment en cas de compromission avancée du système d'information.
+    level2_how_content: |
+      <p>Cette mesure peut inclure la mise en oeuvre de plusieurs bonnes pratiques additionnelles :</p>
+      <ul>
+        <li>Chiffrement des données au niveau fichier ou base de données</li>
+        <li>Utilisation d'une solution de chiffrement de bout en bout pour les communications</li>
+        <li>Mise en place d'un système de gestion des droits numériques (DRM)</li>
+        <li>Utilisation d'un environnement isolé (air gap) pour les données les plus critiques</li>
+        <li>Audit régulier des accès aux données sensibles</li>
+      </ul>
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber ou référencé par un Campus Cyber, pour la mise en œuvre de cette mesure.</p>
+
+  - identifier: acces-teletravail-acces-distants-mesures-particulieres
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 12
+    level1_title: Mettre en place pour tous les accès distants des mécanismes de double authentification à minima
+    level1_why_content: |
+      Les points d'accès accessible via Internet représentant la première surface d'attaque éprouvée très régulièrement de manière automatisée par les cyberattaques, il convient donc de les sécuriser davantage
+    level1_how_content: |
+      <p>En se basant sur les listes exhaustives des accès distants ou dits « télétravaillés », il est recommandé de mettre en place des mécanismes de double authentification (exemple : code OTP reçu par sms, par mail, via application ou clef sécurisée dédiée, par certificat) avec à minima, avec des restrictions via adresses IP légitimes. Des restrictions complémentaires pourraient par exemple mise en œuvre sur la localisation des accès entrants (ex : pays), les plages horaires acceptées (exemple : heures ouvrées seulement), procédure ponctuelle d'ouverture et de fermeture de l'accès durant chaque intervention à distance.</p>
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber, pour la mise en œuvre de cette mesure.</p>
+    level2_title: Gérer tous les accès distants via un VPN, lui même authentifié à double facteur
+    level2_why_content: |
+      L'utilisation d'un VPN permet de créer un tunnel chiffré entre le poste distant et le réseau de l'entité, limitant ainsi les risques d'interception des communications. Le VPN permet également de centraliser les accès distants et de mieux les contrôler.
+    level2_how_content: |
+      <p>Il est recommandé de :</p>
+      <ul>
+        <li>Déployer une solution VPN pour tous les accès distants</li>
+        <li>Configurer le VPN avec une authentification à double facteur</li>
+        <li>Restreindre les accès via le VPN selon les besoins métiers de chaque utilisateur</li>
+        <li>Journaliser toutes les connexions VPN</li>
+        <li>Surveiller les connexions VPN suspectes</li>
+      </ul>
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber, pour la mise en œuvre de cette mesure.</p>
+
+  - identifier: acces-si-industriel-teletravail-acces-distants-mesures-particulieres
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 12
+    level1_title: Mettre en place pour tous les accès distants des systèmes industriels des mécanismes de double authentification
+    level1_why_content: |
+      Les points d'accès accessible via Internet représentant la première surface d'attaque éprouvée très régulièrement de manière automatisée par les cyberattaques, il convient donc de les sécuriser davantage.
+    level1_how_content: |
+      <p>En se basant sur les listes exhaustives des accès distants ou dits « télétravaillés » des systèmes industriels, il est recommandé de mettre en place des mécanismes de double authentification avec à minima, avec des restrictions via adresses IP légitimes. Des restrictions complémentaires pourraient par exemple mise en œuvre sur la localisation des accès entrants (ex : pays), les plages horaires acceptées (exemple : heures ouvrées seulement), procédure ponctuelle d'ouverture et de fermeture de l'accès durant chaque intervention à distance.</p>
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber, pour la mise en œuvre de cette mesure.</p>
+    level2_title: Gérer tous les accès distants des systèmes industriels via un VPN, lui même authentifié à double facteur
+    level2_why_content: |
+      Pour les systèmes industriels, la sécurisation des accès distants est encore plus critique car une compromission peut avoir des impacts directs sur la production et la sécurité physique. L'utilisation d'un VPN dédié aux systèmes industriels permet une meilleure isolation et un contrôle renforcé.
+    level2_how_content: |
+      <p>Il est recommandé de :</p>
+      <ul>
+        <li>Déployer une solution VPN dédiée aux systèmes industriels, distincte du VPN bureautique</li>
+        <li>Configurer le VPN avec une authentification à double facteur renforcée</li>
+        <li>Limiter strictement les accès selon les besoins opérationnels</li>
+        <li>Mettre en place une surveillance en temps réel des connexions</li>
+        <li>Journaliser exhaustivement toutes les actions réalisées via les accès distants</li>
+      </ul>
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber, pour la mise en œuvre de cette mesure.</p>
+
+  - identifier: acces-administrateurs-si-mesures-specifiques
+    category: acces
+    status: active
+    version: '1.0'
+    priority: 13
+    level1_title: Protéger de manière spécifique les accès des admininistrateurs
+    level1_why_content: |
+      Cette mesure permet de réduire le risque de compromission des comptes d'administration et d'accès illicite aux fonctions d'administration du service par un cyberattaque et d'une compromission totale du système d'information.
+    level1_how_content: |
+      Cette mesure peut inclure la mise en oeuvre de plusieurs bonnes pratiques :
+      <ul>
+        <li>Contraintes de complexité et de longueur des mots de passe (idéalement 16 caractères)</li>
+        <li>Modification systématique des mots de passe par défaut et/ou à la première utilisation (admin métiers et admin SI)</li>
+        <li>Mots de passe des comptes à haut privilèges (ex : administrateur du domaine) stockées dans un coffre-fort physique ou armoire fermée à clef</li>
+        <li>Pour les accès à un environnement cloud : mise en place d'une authentification multifacteur</li>
+      </ul>
+      
+      <p>Les contraintes renforcées sur les mots de passe (longueur, robustesse, changement des mots de passe) peuvent être implémentées via l'outil de gestion centralisée de politiques de sécurité (exemple : Active Directory, Samba-AD).</p>
+      
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber, pour la mise en œuvre d'un coffre-fort de mots de passe ; de l'authentification multifacteur (exemple : code OTP reçu par sms, par mail, via application ou clef sécurisée dédiée, par certificat)</p>
+    level2_title: Compléter les mesures de sécurisation des accès d'administration
+    level2_why_content: |
+      Les comptes d'administration étant les plus critiques du système d'information, des mesures additionnelles de sécurisation permettent de réduire encore davantage les risques de compromission et leurs impacts potentiels.
+    level2_how_content: |
+      <p>Cette mesure peut inclure la mise en oeuvre de bonnes pratiques additionnelles :</p>
+      <ul>
+        <li>Utilisation de stations d'administration dédiées et isolées</li>
+        <li>Mise en place de solutions de type PAM (Privileged Access Management)</li>
+        <li>Surveillance en temps réel des activités d'administration</li>
+        <li>Enregistrement et analyse des sessions d'administration</li>
+        <li>Validation à quatre yeux pour les opérations critiques</li>
+        <li>Rotation automatique des mots de passe des comptes de service</li>
+      </ul>
+      <p>Il est préconisé de s'appuyer sur les compétences d'un prestataire externe, idéalement labellisé Expert Cyber, pour la mise en œuvre de cette mesure.</p>

@@ -1,0 +1,88 @@
+---
+security_measures:
+  - identifier: sensibilisation-actions-sensibilisation-menace-et-bonnes-pratiques
+    category: sensibilisation
+    status: active
+    version: '1.0'
+    priority: 17
+    level1_title: Mettre en œuvre des bonnes pratiques de sensibilisation
+    level1_why_content: |
+      La sécurité numérique repose nécessairement en partie sur les bonnes pratiques de utilisateurs sur leurs postes et dans l'utilisation au quotidien du numérique. Et moins il n'y a de protections techniques, plus la sécurité repose sur les usages des utilisateurs. Ainsi, il est nécessaire que chaque utilisateur du système d'information (bureautique ou industriel) soit sensibilisé aux risques et formé aux bonnes pratiques à mettre en œuvre à son propre niveau. La cible étant que les utilisateurs sachent notamment :
+      <ul>
+        <li>savoir reconnaître un email d'hameçonnage;</li>
+        <li>savoir gérer correctement ses mots de passe;</li>
+        <li>protéger ses terminaux lors d'un déplacement;</li>
+        <li>être davantage vigilant selon le niveau de criticité et de sensibilité des informations manipulées</li>
+        <li>plus largement comprendre les mesures de sécurité imposées dans l'entité, les respecter et ne pas essayer de les contourner.</li>
+      </ul>
+    level1_how_content: |
+      Il est préconisé de mener plusieurs actions de sensibilisation pouvant inclure :
+      <ul>
+        <li>Campagnes d'affichage sur les risques et les bonnes pratiques.</li>
+        <li>Envoi de mails d'information sur les risques et les bonnes pratiques</li>
+        <li>Conférence de sensibilisation auprès de l'ensemble des utilisateurs</li>
+        <li>Sensibilisation ciblée du service achat aux risques d'escroquerie au faux ordre de virement et fraude au président</li>
+        <li>Communication des décideurs envers les services comptabilité / finances pour rappeler les consignes liées au paiement et qu'ils n'ordonneront jamais de réaliser un virement via un simple mail ou via téléphone uniquement(communication à réaliser par exemple avant les vacances)</li>
+        <li>Pour les entités détenant des informations stratégiques et ayant un risque d'espionnage industriel : sensibilisation aux risques particuliers relatifs aux déplacement professionnels et sensibilisation ciblée auprès des agents effectuant des missions à l'étranger</li>
+      </ul>
+      
+      <p>Pour que les utilisateurs restent vigilants dans la durée, il est nécessaire de renouveler périodiquement les actions de sensibilisation/formation et sous plusieurs formats répartis dans l'année.</p>
+    level2_title: En complément des pratiques déjà en œuvre, mettre en place des actions de sensibilisation additionnelles
+    level2_why_content: |
+      La sécurité numérique repose nécessairement en partie sur les bonnes pratiques de utilisateurs sur leurs postes et dans l'utilisation au quotidien du numérique. Et moins il n'y a de protections techniques, plus la sécurité repose sur les usages des utilisateurs. Ainsi, il est nécessaire que chaque utilisateur du système d'information (bureautique ou industriel) soit sensibilisé aux risques et formé aux bonnes pratiques à mettre en œuvre à son propre niveau. La cible étant que les utilisateurs sachent notamment :
+      <ul>
+        <li>savoir reconnaître un email d'hameçonnage ;</li>
+        <li>savoir gérer correctement ses mots de passe ;</li>
+        <li>protéger ses terminaux lors d'un déplacement ;</li>
+        <li>être davantage vigilant selon le niveau de criticité et de sensibilité des informations manipulées</li>
+        <li>plus largement comprendre les mesures de sécurité imposées dans l'entité, les respecter et ne pas essayer de les contourner.</li>
+      </ul>
+    level2_how_content: |
+      Il est préconisé de mener des actions de sensibilisation additionnelles pouvant inclure (liste à corriger en fonction des actions déjà réalisées) :
+      <ul>
+        <li>Sensibilisation des nouveaux arrivants</li>
+        <li>Intervention auprès du CODIR</li>
+        <li>Réalisation de tests de connaissance des bonnes pratiques de sécurité auprès des collaborateurs.</li>
+        <li>Campagne de faux phishing qui consiste à « tester » la capacité des utilisateurs à détecter un mail piégé</li>
+      </ul>
+
+  - identifier: sensibilisation-risque-espionnage-industriel-r-et-d
+    category: sensibilisation
+    status: active
+    version: '1.0'
+    priority: 18
+    level1_title: Mener des actions de sensibilisation ciblée auprès du personnel effectuant des déplacements
+    level1_why_content: |
+      L'emploi de téléphones connectés (ou ordiphones/smartphones), d'ordinateurs portables et de tablettes facilite et accélère le transport et l'échange de données. Parmi les informations stockées sur ces supports, certaines peuvent présenter une sensibilité importante pour l'entité. Leur perte, leur saisie ou leur vol peut avoir des conséquences majeures sur nos activités et sur leur pérennité. Il nous faut donc, dans ce contexte de nomadisme, les protéger face aux risques et aux menaces qui pèsent sur elles, tout particulièrement lors de nos déplacements à l'étranger.
+    level1_how_content: |
+      <p>Il est préconisé d'identifier les personnels amenés à se déplacer les plus souvent, et plus particulièrement à l'étranger, et de les sensibiliser aux risques particuliers relatifs aux déplacements professionnels et sensibilisation ciblée auprès des agents effectuant des missions à l'étranger.</p>
+      
+      <p>Le <a href="https://www.ssi.gouv.fr/uploads/IMG/pdf/passeport_voyageurs_anssi.pdf">passeport de conseils aux voyages de l'ANSSI</a> peut être un premier élément de communication à leur transmettre, voire à lire avec eux.</p>
+      
+      <p>Une session de sensibilisation dédiée peut également être une bonne pratique.</p>
+
+  - identifier: sensibilisation-collaborateurs-soumis-obligations-usages-securises
+    category: sensibilisation
+    status: active
+    version: '1.0'
+    priority: 30
+    level1_title: Établir une charte informatique
+    level1_why_content: |
+      La mise en place d'une charte informatique permet de responsabiliser davantage les utilisateurs envers le risque cyber et permet de garantir la connaissance des bonnes pratiques exigées par l'entité et responsabiliser l'utilisateur face à ses propres usages des outils numériques. Elle participe à la sensibilisation/formation des utilisateurs.
+    level1_how_content: |
+      La charte doit tout à minima contenir les éléments suivants :
+      <ul>
+        <li>répertorier les moyens informatiques mis à disposition</li>
+        <li>clarifier la gestion des terminaux personnels au sein de l'entité (interdit et/ou accepté selon des modalités bien précisées)</li>
+        <li>rappeler les exigences de cybersécurité liées à la gestion des comptes d'accès, des mots de passe, des données à protéger en priorités, de l'utilisation de la messagerie et des ressources cloud</li>
+        <li>informer les collaborateurs de la bonne attitude et des bons réflexes à avoir en cas d'incident avéré</li>
+        <li>lister les moyens et conditions d'administration en place (exemple : systèmes automatiques de filtrage, systèmes automatiques de traçabilité, systèmes de gestion du poste de travail)</li>
+        <li>préciser les responsabilités et les sanctions encourues en cas de non-respect de la charte</li>
+      </ul>
+    level2_title: S'assurer que la charte informatique est annexée au contrat de travail et est signée par les salariés
+    level2_why_content: |
+      La mise en annexe au contrat de travail de la charte informatique permet de la rendre opposable aux salariés, et en dernier recourt de sanctionner un salarié qui ne la respecterait pas.
+    level2_how_content: |
+      Après validation des représentants du personnel (si nécessaire), il est conseillé d'annexer la charte au contrat de travail. La signature de la signature peut ainsi être réalisé à l'arrivée du collaborateur ou à la suite d'une séance collective de lecture de la charte et/ou session de sensibilisation aux bonnes pratiques.
+      
+      <p>Il est préconisé de définir ce process avec les équipes RH.</p>

@@ -1,0 +1,266 @@
+questions:
+  - label: "securite-poste-maj-fonctionnelles-et-securite-deployees"
+    text: "Les mises à jour fonctionnelles et de sécurité des logiciels utilisés sont-elles déployées sur les postes de travail des utilisateurs et des administrateurs ?"
+    question_type: "single_choice"
+    weight: 3
+    active_status: true
+    categories:
+      - "Sécurité des postes"
+    tooltip_content: |
+      <div>
+        <h5>Mises à jour installées</h5>
+        <p>Pour cocher la réponse "Toutes les mises à jour sont déployées […]", l'entité doit s'assurer que les mises à jour sont bien installées.</p>
+      </div>
+      <div>
+        <h5>Mesures complémentaires</h5>
+        <div>Mesures complémentaires pouvant être menées pour sécuriser les postes de travail obsolètes :
+          <ul>
+            <li>les isoler et les cloisonner du reste du réseau bureautique (ex : déconnecter de l'annuaire centralisée), une compromission de ces derniers aura ainsi un faible impact</li>
+            <li>mettre en œuvre un outil de protection de type EDR en complément de l'antivirus intégrant des règles de sécurité spécifiques aux postes obsolètes.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h5>Déploiement des logiciels et contrôle des mises à jour</h5>
+        <div>Afin de s'assurer que les mises à jours sont déployées, il peut être nécessaire de :
+          <ul>
+            <li>faire une vérification manuelle sur chaque poste et pour chaque logiciel (à l'aide d'un script/programme exécuté sur chaque poste)</li>
+            <li>déployer un agent logiciel réalisant la vérification (outil de gestion des vulnérabilités)</li>
+            <li>utiliser un outil de gestion centralisé des logiciels : un tel outil permet de connaître l'état de déploiement des logiciels (et notamment leur version) de chaque poste de manière centralisée</li>
+          </ul>
+        </div>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "securite-poste-maj-fonctionnelles-et-securite-deployees-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-poste-maj-fonctionnelles-et-securite-deployees-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-poste-maj-fonctionnelles-et-securite-deployees"
+            niveau: 1
+      - text: "Les mises à jour sont déployées systématiquement, il existe tout de même certaines exceptions non traitées actuellement"
+        identifier: "securite-poste-maj-fonctionnelles-et-securite-deployees-systematiquement-avec-exceptions"
+        order_index: 3
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "securite-poste-maj-fonctionnelles-et-securite-deployees"
+            niveau: 2
+      - text: "Toutes les mises à jour sont déployées systématiquement dès que celles-ci sont disponibles et les exceptions font l'objet de mesures complémentaires"
+        identifier: "securite-poste-maj-fonctionnelles-et-securite-deployees-systematiquement-des-que-disponibles"
+        order_index: 4
+        indice: 3.0
+
+  - label: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees"
+    text: "Les mises à jour fonctionnelles et de sécurité sont-elles déployées sur les postes de travail des utilisateurs et des administrateurs des systèmes industriels ?"
+    question_type: "single_choice"
+    weight: 2
+    active_status: true
+    categories:
+      - "Sécurité des postes"
+    answer_options:
+      - text: "Non applicable"
+        identifier: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees"
+            niveau: 1
+      - text: "Les mises à jour sont déployées systématiquement, il existe tout de même certaines exceptions non traitées actuellement"
+        identifier: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees-systematiquement-avec-exceptions"
+        order_index: 3
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees"
+            niveau: 2
+      - text: "Toutes les mises à jour sont déployées systématiquement dès que celles-ci sont disponibles et les exceptions font l'objet de mesures complémentaires"
+        identifier: "securite-poste-si-industriel-maj-fonctionnelles-et-securite-deployees-systematiquement-des-que-disponibles"
+        order_index: 4
+        indice: 3.0
+
+  - label: "securite-poste-antivirus-deploye"
+    text: "Un antivirus à jour est-il déployé sur chaque poste de travail ?"
+    question_type: "single_choice"
+    weight: 3
+    active_status: true
+    categories:
+      - "Sécurité des postes"
+    tooltip_content: |
+      <div>
+        <h5>Mises à jour installées</h5>
+        <p>Pour cocher la réponse "Oui et ses alertes sont systématiquement traitées […]", l'entité doit s'assurer que les mises à jour sont bien installées.</p>
+      </div>
+      <div>
+        <h5>Windows Defender</h5>
+        <p>Windows Defender est l'antivirus intégré gratuitement dans tous les systèmes d'exploitation Windows récents.</p>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "securite-poste-antivirus-deploye-nsp"
+        order_index: 0
+      - text: "Non"
+        identifier: "securite-poste-antivirus-deploye-non"
+        order_index: 1
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-poste-antivirus-deploye"
+            niveau: 1
+      - text: "Oui, mais ses alertes ne sont pas toujours traitées"
+        identifier: "securite-poste-antivirus-deploye-oui-alertes-pas-toujours-traitees"
+        order_index: 2
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "securite-poste-antivirus-deploye"
+            niveau: 2
+      - text: "Oui et ses alertes sont systématiquement traitées"
+        identifier: "securite-poste-antivirus-deploye-oui-alertes-toujours-traitees"
+        order_index: 3
+        indice: 3.0
+
+  - label: "securite-poste-si-industriel-antivirus-deploye"
+    text: "Un antivirus à jour est-il déployé sur chaque poste de travail des systèmes industriels ?"
+    question_type: "single_choice"
+    weight: 2
+    active_status: true
+    categories:
+      - "Sécurité des postes"
+    answer_options:
+      - text: "Non applicable"
+        identifier: "securite-poste-si-industriel-antivirus-deploye-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "securite-poste-si-industriel-antivirus-deploye-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-poste-si-industriel-antivirus-deploye-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-poste-si-industriel-antivirus-deploye"
+            niveau: 1
+      - text: "Oui, mais ses alertes ne sont pas toujours traitées"
+        identifier: "securite-poste-si-industriel-antivirus-deploye-oui-alertes-pas-toujours-traitees"
+        order_index: 3
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "securite-poste-si-industriel-antivirus-deploye"
+            niveau: 2
+      - text: "Oui et ses alertes sont systématiquement traitées"
+        identifier: "securite-poste-si-industriel-antivirus-deploye-oui-alertes-toujours-traitees"
+        order_index: 4
+        indice: 3.0
+
+  - label: "securite-poste-pare-feu-local-active"
+    text: "Un pare-feu local est-il activé sur les postes de travail ?"
+    question_type: "single_choice"
+    weight: 2
+    active_status: true
+    categories:
+      - "Sécurité des postes"
+    tooltip_content: |
+      <div>
+        <h5>Pare-feu local</h5>
+        <p>Le pare-feu local est un logiciel qui permet de filtrer le trafic entrant et sortant dans le système d'exploitation du poste de travail. Un pare-feu local est une fonction intégrée à la plupart des systèmes d'exploitation grand public. Par défaut, ce logiciel est désactivé ou d'un niveau de paramétrage insuffisant. Un niveau suffisant serait de restreindre les communications réseaux directes entre les postes de travail et de bloquer toute connexion entrante. Des pare-feux sont également commercialisés en complément de suites logicielles antivirales.</p>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "securite-poste-pare-feu-local-active-nsp"
+        order_index: 0
+      - text: "Non"
+        identifier: "securite-poste-pare-feu-local-active-non"
+        order_index: 1
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-poste-pare-feu-local-active"
+            niveau: 1
+      - text: "Oui, et les flux entrants et sortants sont filtrés"
+        identifier: "securite-poste-pare-feu-local-active-oui"
+        order_index: 2
+        indice: 3.0
+
+  - label: "securite-poste-outils-complementaires-securisation"
+    text: "En complément de l'antivirus, un outil de type EDR a-t-il été mis en place ?"
+    question_type: "single_choice"
+    weight: 2
+    active_status: true
+    categories:
+      - "Sécurité des postes"
+    tooltip_content: |
+      <div>
+        <h5>EDR</h5>
+        <p>Un EDR, Endpoint Detection Response, détecte et bloque les menaces sur les terminaux en s'appuyant sur l'analyse comportementale et la corrélation d'événements.</p>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "securite-poste-outils-complementaires-securisation-nsp"
+        order_index: 0
+      - text: "Non"
+        identifier: "securite-poste-outils-complementaires-securisation-non"
+        order_index: 1
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-poste-outils-complementaires-securisation"
+            niveau: 1
+      - text: "Oui, un outil de type EDR a été mis en place mais ses alertes ne sont pas toujours traitées"
+        identifier: "securite-poste-outils-complementaires-securisation-oui-outil-complementaire-type-edr"
+        order_index: 2
+        indice: 1.0
+        triggered_security_measures:
+          - identifier: "securite-poste-outils-complementaires-securisation"
+            niveau: 2
+      - text: "Oui, un outil de type EDR a été mis en place et ses alertes sont systématiquement traitées"
+        identifier: "securite-poste-outils-complementaires-securisation-oui-systematique-outil-complementaire-type-edr"
+        order_index: 3
+        indice: 3.0
+
+  - label: "securite-poste-r-et-d-disques-chiffres"
+    text: "Les disques durs des matériels nomades sont-ils chiffrés ?"
+    question_type: "single_choice"
+    weight: 2
+    active_status: true
+    categories:
+      - "Sécurité des postes"
+    tooltip_content: |
+      <div>
+        <h5>Windows Bitlocker</h5>
+        <p>Windows Bitlocker est un outil de chiffrement intégré gratuitement dans tous les systèmes d'exploitation Windows récents.</p>
+        <p>NB : il est indispensable que le déchiffrement au démarrage du poste soit soumis à un mot de passe robuste (ou un token USB).</p>
+      </div>
+      <div>
+        <h5>Matériels nomades</h5>
+        <div>Il s'agit des équipements et matériels numériques transportés durant les déplacements, exemples :
+          <ul>
+            <li>ordinateur portable</li>
+            <li>tablette</li>
+            <li>téléphone</li>
+            <li>clefs USB et disques durs</li>
+          </ul>
+        </div>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "securite-poste-r-et-d-disques-chiffres-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "securite-poste-r-et-d-disques-chiffres-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-poste-r-et-d-disques-chiffres-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-poste-r-et-d-disques-chiffres"
+            niveau: 1
+      - text: "Oui"
+        identifier: "securite-poste-r-et-d-disques-chiffres-oui"
+        order_index: 3
+        indice: 3.0
+

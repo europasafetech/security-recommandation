@@ -1,0 +1,355 @@
+questions:
+  - label: "securite-infrastructure-pare-feu-deploye"
+    text: "La connexion à Internet est-elle protégée par un pare-feu ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des infrastructures"
+    tooltip_content: |
+      <div>
+        <h5>Pare-feu</h5>
+        <p>Le pare-feu est l'outil permettant de restreindre les services exposés sur Internet, et réalisant le filtrage des communications et des flux réseaux. Afin de réduire au maximum la surface d'attaque disponible pour les attaquants, il est recommandé de réduire au maximum les services et les flux accessibles depuis Internet.</p>
+        <p>Par exemple, il est fortement déconseillé d'autoriser l'accès à distance vers des objets connectés (ex : caméra, imprimante, sondes etc.)</p>
+        <p>NB : une box Internet n'est pas à considérer comme un pare-feu physique puisqu'elle ne permet pas de filtrer efficacement les flux sortants.</p>
+      </div>
+    answer_options:
+      - text: "Je ne sais pas"
+        identifier: "securite-infrastructure-pare-feu-deploye-nsp"
+        order_index: 0
+      - text: "Non"
+        identifier: "securite-infrastructure-pare-feu-deploye-non"
+        order_index: 1
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-pare-feu-deploye"
+            niveau: 1
+      - text: "Oui"
+        identifier: "securite-infrastructure-pare-feu-deploye-oui"
+        order_index: 2
+        triggered_questions:
+          - label: "securite-infrastructure-pare-feu-deploye-oui-tiroir-interconnexions-protegees"
+            text: "Est-ce que seuls les flux entrants et sortants strictement nécessaires entre Internet et le système d'information (ou autres réseaux externes) sont autorisés ?"
+            question_type: "single_choice"
+            weight: 2
+            active_status: true
+            categories:
+              - "Sécurité des infrastructures"
+            answer_options:
+              - text: "Je ne sais pas"
+                identifier: "securite-infrastructure-pare-feu-deploye-oui-tiroir-interconnexions-protegees-nsp"
+                order_index: 0
+                indice: 0.0
+                triggered_security_measures:
+                  - identifier: "securite-infrastructure-pare-feu-deploye-interconnexions-protegees"
+                    niveau: 1
+              - text: "Non"
+                identifier: "securite-infrastructure-pare-feu-deploye-oui-tiroir-interconnexions-protegees-non"
+                order_index: 1
+                indice: 0.0
+                triggered_security_measures:
+                  - identifier: "securite-infrastructure-pare-feu-deploye-interconnexions-protegees"
+                    niveau: 1
+              - text: "Oui"
+                identifier: "securite-infrastructure-pare-feu-deploye-oui-tiroir-interconnexions-protegees-oui"
+                order_index: 2
+                indice: 2.0
+                triggered_security_measures:
+                  - identifier: "securite-infrastructure-pare-feu-deploye-interconnexions-protegees"
+                    niveau: 2
+              - text: "Oui et les flux entrants sont protégés par un VPN"
+                identifier: "securite-infrastructure-pare-feu-deploye-oui-tiroir-interconnexions-protegees-oui-VPN"
+                order_index: 3
+                indice: 3.0
+          - label: "securite-infrastructure-pare-feu-deploye-oui-tiroir-logs-stockes"
+            text: "Les journaux des flux entrants, sortants et bloqués (générés par le pare-feu) sont-ils stockés ?"
+            question_type: "single_choice"
+            weight: 2
+            active_status: true
+            categories:
+              - "Sécurité des infrastructures"
+            answer_options:
+              - text: "Je ne sais pas"
+                identifier: "securite-infrastructure-pare-feu-deploye-oui-tiroir-logs-stockes-nsp"
+                order_index: 0
+                indice: 0.0
+                triggered_security_measures:
+                  - identifier: "securite-infrastructure-pare-feu-deploye-logs-stockes"
+                    niveau: 1
+              - text: "Non"
+                identifier: "securite-infrastructure-pare-feu-deploye-oui-tiroir-logs-stockes-non"
+                order_index: 1
+                indice: 0.0
+                triggered_security_measures:
+                  - identifier: "securite-infrastructure-pare-feu-deploye-logs-stockes"
+                    niveau: 1
+              - text: "Oui, nous stockons quelques journaux du pare-feu"
+                identifier: "securite-infrastructure-pare-feu-deploye-oui-tiroir-logs-stockes-oui-logs-stockes"
+                order_index: 2
+                indice: 1.0
+                triggered_security_measures:
+                  - identifier: "securite-infrastructure-pare-feu-deploye-logs-stockes"
+                    niveau: 1
+              - text: "Oui, nous stockons les journaux du pare-feu avec une durée de conservation d'au moins 6 mois"
+                identifier: "securite-infrastructure-pare-feu-deploye-oui-tiroir-logs-stockes-oui-logs-stockes-conserves-6-mois"
+                order_index: 3
+                indice: 3.0
+
+  - label: "securite-infrastructure-si-industriel-pare-feu-deploye"
+    text: "Des mesures de cloisonnement spécifiques des systèmes industriels ont-elles été mise en œuvre ?"
+    question_type: "single_choice"
+    weight: 2
+    active_status: true
+    categories:
+      - "Sécurité des infrastructures"
+    tooltip_content: |
+      <div>
+        <h5>Cloisonnement des systèmes industriels</h5>
+        <p>Le plus sécurisé est un cloisonnement strict (pas d'interconnexion). De manière plus fonctionnelle, les flux réseaux entre les réseaux bureautique et industriel sont filtrés strictement (pour ne laisser passer que les flux des applications strictement nécessaires). Il est par ailleurs fortement conseillé de bloquer l'accès à distance vers des objets connectés (ex : caméra, équipements industriels, sondes etc.) sans restriction particulière (adresse IP source) ou sans passer par un VPN.</p>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "securite-infrastructure-si-industriel-pare-feu-deploye-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "securite-infrastructure-si-industriel-pare-feu-deploye-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-infrastructure-si-industriel-pare-feu-deploye-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-si-industriel-pare-feu-deploye"
+            niveau: 1
+      - text: "Oui, tous les flux réseau non nécessaires sont bloqués"
+        identifier: "securite-infrastructure-si-industriel-pare-feu-deploye-oui-flux-necessaires-bloques"
+        order_index: 3
+        indice: 1.5
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-si-industriel-pare-feu-deploye"
+            niveau: 2
+      - text: "Oui, une segmentation réseau stricte a été mise en œuvre pour isoler l'environnement industriel de l'environnement bureautique (hors besoin métier justifié)"
+        identifier: "securite-infrastructure-si-industriel-pare-feu-deploye-oui-segmentation-stricte"
+        order_index: 4
+        indice: 3.0
+
+  - label: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-equipements-securite-deployees"
+    text: "Les mises à jour fonctionnelles et de sécurité des équipements de sécurité sont-elles déployées ?"
+    question_type: "single_choice"
+    weight: 3
+    active_status: true
+    categories:
+      - "Sécurité des infrastructures"
+    tooltip_content: |
+      <div>
+        <h5>Équipements de sécurité</h5>
+        <div>Exemples d'équipements de sécurité à mettre à jour dès que possible :
+          <ul>
+            <li>Pare-feu réseau, pare-feu applicatif (WAF)</li>
+            <li>Équipement VPN</li>
+            <li>Proxy</li>
+          </ul>
+        </div>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-equipements-securite-deployee-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-equipements-securite-deployees-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-equipements-securite-deployees-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-equipements-securite-deployees"
+            niveau: 1
+      - text: "Toutes les mises à jour logicielles sont déployées dès que celles-ci sont disponibles et fonctionnelles"
+        identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-equipements-securite-deployees-des-que-possible"
+        order_index: 3
+        indice: 3.0
+
+  - label: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-systemes-exploitation-securite-deployees"
+    text: "Les mises à jour fonctionnelles et de sécurité des systèmes d'exploitation des serveurs, services et logiciels d'administration sont-elles déployées ?"
+    question_type: "single_choice"
+    weight: 3
+    active_status: true
+    categories:
+      - "Sécurité des infrastructures"
+    tooltip_content: |
+      <div>
+        <h5>Serveurs et services d'administration</h5>
+        <div>Exemples des serveurs et des services d'administration à mettre à jour dès que possible :
+          <ul>
+            <li>Serveurs d'infrastructures : Windows Server, Active Directory, serveur gestionnaire de mises à jour WSUS, serveur de messagerie (exchange, zimbra, etc.), solution de virtualisation, outil de supervision et de télémaintenance, solution de sauvegarde</li>
+            <li>Serveurs métiers : base de données, serveur web (Apache, IIS, etc.), serveur d'application, outil de développement et autres applicatifs etc.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h5>Mesures complémentaires</h5>
+        <div>Mesures complémentaires pouvant être menées pour sécuriser les serveurs obsolètes :
+          <ul>
+            <li>les isoler et les cloisonner du reste du réseau bureautique (ex : déconnecter de l'annuaire centralisée)</li>
+            <li>ne pas les interconnecter à Internet</li>
+            <li>mettre en œuvre un outil de protection de type EDR intégrant des règles de sécurité spécifiques aux serveurs obsolètes.</li>
+          </ul>
+        </div>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-systemes-exploitation-securite-deployees-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-systemes-exploitation-securite-deployees-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-systemes-exploitation-securite-deployees-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-systemes-exploitation-securite-deployees"
+            niveau: 1
+      - text: "Les mises à jour sont déployées systématiquement, il existe tout de même certaines exceptions non traitées actuellement"
+        identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-systemes-exploitation-securite-deployees-a-intervalle-regulier"
+        order_index: 3
+        indice: 1.5
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-systemes-exploitation-securite-deployees"
+            niveau: 2
+      - text: "Toutes les mises à jour sont déployées systématiquement dès que celles-ci sont disponibles et les exceptions font l'objet de mesures complémentaires"
+        identifier: "securite-infrastructure-mises-a-jour-fonctionnelles-securite-systemes-exploitation-securite-deployees-des-que-possible"
+        order_index: 4
+        indice: 3.0
+
+  - label: "securite-infrastructure-outils-securisation-systeme-messagerie"
+    text: "Des mesures et outils spécifiques sont-ils mis en œuvre pour sécuriser le système de messagerie ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des infrastructures"
+    tooltip_content: |
+      <div>
+        <h5>Mécanismes de protection</h5>
+        <div>Les mécanismes de protection de mails illégitimes à paramétrer sur le serveur DNS sont :
+          <ul>
+            <li>Sender Policy Framework (SPF) qui permet de spécifier les adresses IP des serveurs autorisés à émettre les mails d'un domaine ;</li>
+            <li>DomainKeys Identified Mail (DKIM) qui permet l'authentification du domaine de messagerie d'un mail à l'aide d'une signature cryptographique</li>
+            <li>Domain-based Message Authentication, Reporting and Conformance (DMARC) qui permet notamment à une entité de définir une politique de traitement de ses mails envoyés en fonction des résultats de conformité SPF et DKIM</li>
+          </ul>
+        </div>
+        <div>Si l'entité (ou son prestataire) ne maitrise pas ces éléments, il est conseillé de se faire accompagner par un prestataire spécialisé.</div>
+      </div>
+    answer_options:
+      - text: "Non applicable"
+        identifier: "securite-infrastructure-outils-securisation-systeme-messagerie-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "securite-infrastructure-outils-securisation-systeme-messagerie-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-infrastructure-outils-securisation-systeme-messagerie-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-outils-securisation-systeme-messagerie"
+            niveau: 1
+      - text: "Oui, un outil d'anti-spam et d'anti-hameçonnage a été mis en œuvre"
+        identifier: "securite-infrastructure-outils-securisation-systeme-messagerie-antispam"
+        order_index: 3
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-outils-securisation-systeme-messagerie"
+            niveau: 2
+      - text: "Oui, un outil d'anti-spam et d'anti-hameçonnage a été mis en œuvre et les mécanismes complémentaires de protection de mails illégitimes sont activés"
+        identifier: "securite-infrastructure-outils-securisation-systeme-messagerie-webmail"
+        order_index: 4
+        indice: 3.0
+
+  - label: "securite-infrastructure-acces-wifi-securises"
+    text: "Les points d'accès wifi sont-ils sécurisés ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des infrastructures"
+    tooltip_content: |
+      <div>
+        <h5>Chiffrement de connexion</h5>
+        <div>Minimum attendu pour cocher la 4ème réponse :
+          <ul>
+            <li>Mot de passe de 20 caractères minimum ;</li>
+            <li>Chiffrement robuste de la connexion wifi, a minima WPA2 ;</li>
+            <li>Pas d'accès au réseau interne pour les visiteurs via le Wi-Fi (SSID différent, sous-réseau différent ou Wi-Fi non accessible au visiteur).</li>
+          </ul>
+        </div>
+      </div>
+    answer_options:
+      - text: "Non Applicable"
+        identifier: "securite-infrastructure-acces-wifi-securises-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "securite-infrastructure-acces-wifi-securises-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-infrastructure-acces-wifi-securises-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-acces-wifi-securises"
+            niveau: 1
+      - text: "Oui, le chiffrement de la connexion wifi est robuste"
+        identifier: "securite-infrastructure-acces-wifi-securises-oui-chiffrement-robuste"
+        order_index: 3
+        indice: 2.0
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-acces-wifi-securises"
+            niveau: 2
+      - text: "Oui, le chiffrement de la connexion wifi est robuste et les visiteurs n'ont pas accès au réseau interne"
+        identifier: "securite-infrastructure-acces-wifi-securises-oui-chiffrement-robuste-acces-visiteur-restreint"
+        order_index: 4
+        indice: 3.0
+
+  - label: "securite-infrastructure-espace-stockage-serveurs"
+    text: "L'accès à la salle ou à l'espace dédié au stockage des serveurs d'administration, baies informatiques et des équipements réseau est-il protégé par une porte sécurisée ?"
+    question_type: "single_choice"
+    weight: 1
+    active_status: true
+    categories:
+      - "Sécurité des infrastructures"
+    tooltip_content: |
+      <div>
+        <h5>Accès aux serveurs</h5>
+        <p>Pour sélectionner "Oui", l'accès aux serveurs doit être à minima protégé par une porte fermée à clef dont la clef n'est accessible qu'aux personnes légitimes.</p>
+      </div>
+      <div>
+        <h5>Référent sûreté de gendarmerie et de police</h5>
+        <p>Si c'est jugé nécessaire, l'entité peut être mise en relation avec un référent sûreté physique de la gendarmerie et de la police.</p>
+      </div>
+    answer_options:
+      - text: "Non Applicable"
+        identifier: "securite-infrastructure-espace-stockage-serveurs-na"
+        order_index: 0
+      - text: "Je ne sais pas"
+        identifier: "securite-infrastructure-espace-stockage-serveurs-nsp"
+        order_index: 1
+      - text: "Non"
+        identifier: "securite-infrastructure-espace-stockage-serveurs-non"
+        order_index: 2
+        indice: 0.0
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-espace-stockage-serveurs"
+            niveau: 1
+      - text: "Oui, l'accès n'est autorisé qu'aux personnes légitimes"
+        identifier: "securite-infrastructure-espace-stockage-serveurs-oui-porte-ferme-a-clef"
+        order_index: 3
+        indice: 1.5
+        triggered_security_measures:
+          - identifier: "securite-infrastructure-espace-stockage-serveurs"
+            niveau: 2
+      - text: "Oui, l'accès n'est autorisé qu'aux personnes légitimes et supervisé par un dispositif de vidéoprotection"
+        identifier: "securite-infrastructure-espace-stockage-serveurs-oui-porte-ferme-a-clef-videosurveillance"
+        order_index: 4
+        indice: 3.0

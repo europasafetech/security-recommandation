@@ -1,0 +1,134 @@
+---
+security_measures:
+  - identifier: gouvernance-infos-et-activites-a-proteger
+    category: gouvernance
+    status: active
+    version: '1.0'
+    priority: 1
+    level1_title: Établir la liste des activités et des données à protéger en priorité
+    level1_why_content: |
+      Cette mesure permet de remettre au centre de la démarche de sécurisation les véritables enjeux de sécurité de l'entité et de prioriser les efforts de sécurisation « au bon endroit ».
+    level1_how_content: |
+      La liste des activités et des informations doit être établie de manière collective, au cours d'un atelier de réflexion impliquant les directions métiers et/ou les décideurs de l'organisation. Chaque contributeur réfléchi, à son niveau, aux activités et/ou données qui semblent essentielles à la continuité des missions de l'organisation, et qui par conséquent, ne peuvent être indisponibles, altérés ou volées/divulguées. Ces réflexions sont présentés en séance, et font l'objet d'une validation commune (et si nécessaire, d'arbitrages).
+      
+      Cette liste, énumérant 5 activités et données à protéger en priorité, peut ensuite être formalisée sur une fiche A4 sous la forme ci-dessous.
+      
+      Activités et données à protéger en priorité, classées par ordre de priorité :
+      <ul>
+        <li>1.Production et données techniques de production</li>
+        <li>2.R&D et données d'industrialisation</li>
+        <li>3.Paie des salariés et données bancaires associées</li>
+        <li>4.Facturation et données clients</li>
+        <li>5.Mail/Agenda et données</li>
+      </ul>
+    level2_title: Établir la liste exhaustive et à jour des activités métiers et des informations à protéger en priorité
+    level2_why_content: |
+      Cette mesure permet de remettre au centre de la démarche de sécurisation les véritables enjeux de sécurité de l'entité et de prioriser les efforts de sécurisation « au bon endroit ». Une réflexion exhaustive permet d'avoir une vision détaillée de tous les enjeux de sécurité de l'entité.
+    level2_how_content: |
+      Au sein de chaque service de l'entité, une réflexion doit être menée afin d'établir la liste exhaustive des activités et des données à protéger en priorité au sein de ce service. Après avoir centralisé l'ensemble des listes établies par les services, une réunion de réflexion impliquant les décideurs doit être menée afin de prioriser ces éléments selon par exemple 3 critères : indispensable, important, dispensable. Cette réflexion doit être réactualisée à minima tous les 3 ans avec les décideurs.
+
+  - identifier: gouvernance-schema-si-a-jour
+    category: gouvernance
+    status: active
+    version: '1.0'
+    priority: 20
+    level1_title: Disposer d'un schéma global du réseau informatique et de la liste des interconnexions vers l'extérieur à jour
+    level1_why_content: |
+      <p>Pour bien se protéger de manière adaptée et pour faire le point sur les besoins et les capacités numériques actuels, il est nécessaire pour l'entité d'avoir une vision d'ensemble et une lisibilité quasi exhaustive de son réseau informatique et à minima un schéma général. Cette lisibilité est nécessaire pour instaurer un dialogue clair entre les différents interlocuteurs techniques et métiers et à décider des mesures de sécurité prioritaires à mener.</p>
+      <p>La liste des interconnexions vers l'extérieur permet de mener des actions de sécurisation sur les adresses IP exposées sur internet ce qui est un aspect fondamental de la sécurité d'un système d'information dans la durée car elles représentent pour les hackers les principaux points d'accès et « portes d'entrée » au réseau informatique. En effet, les services exposés sur internet peuvent être exploités par des acteurs malveillants ou par des robots.</p>
+      <p>De mauvaises pratiques, des erreurs de configuration des équipements réseaux ou encore des oublis d'anciens services obsolètes ont souvent comme résultat l'exposition d'interfaces d'administration ou de services internes qui sont autant de points d'entrée dans le système d'information.</p>
+      <p>En cas de cyberattaque et de crise, ce schéma et cette liste à d'interconnexions à jour seront les premiers éléments d'information qui seront utilisées par les experts et prestataires à réponses à incident afin d'effectuer un premier point de situation, d'appréhender le potentiel mode opératoire appliqué par le cyberattaquant et de prendre les mesures d'endiguement et de sécurisation adaptées.</p>
+    level1_how_content: |
+      A l'instar d'un plan d'évacuation, le schéma global du réseau informatique (incluant les systèmes industriels si concerné) doit pouvoir tenir sur une page et représenter les différentes zones d'administration (environnement bureautique centralisant les postes de travail, serveurs, etc.), le plan d'adressage IP associé, les équipements réseaux et listant toutes les interconnexions vers l'extérieur (Internet, accès distants, réseaux partenaires ou prestataires, etc.). Il est recommandé d'imprimer des versions papiers de ces éléments.
+    level2_title: Disposer de la liste des équipements et applicatifs concourant au fonctionnement du système d'information
+    level2_why_content: |
+      <p>Pour bien se protéger de manière adaptée et pour faire le point sur les besoins et les capacités numériques actuels, il est nécessaire pour l'entité d'avoir une vision d'ensemble et une lisibilité quasi exhaustive de son réseau informatique et à minima un schéma général. Cette lisibilité est nécessaire pour instaurer un dialogue clair entre les différents interlocuteurs techniques et métiers et à décider des mesures de sécurité prioritaires à mener.</p>
+      <p>La liste des interconnexions vers l'extérieur permet de mener des actions de sécurisation sur les adresses IP exposées sur internet ce qui est un aspect fondamental de la sécurité d'un système d'information dans la durée car elles représentent pour les hackers les principaux points d'accès et « portes d'entrée » au réseau informatique. En effet, les services exposés sur internet peuvent être exploités par des acteurs malveillants ou par des robots.</p>
+      <p>De mauvaises pratiques, des erreurs de configuration des équipements réseaux ou encore des oublis d'anciens services obsolètes ont souvent comme résultat l'exposition d'interfaces d'administration ou de services internes qui sont autant de points d'entrée dans le système d'information.</p>
+      <p>En cas de cyberattaque et de crise, ce schéma et cette liste à d'interconnexions à jour seront les premiers éléments d'information qui seront utilisées par les experts et prestataires à réponses à incident afin d'effectuer un premier point de situation, d'appréhender le potentiel mode opératoire appliqué par le cyberattaquant et de prendre les mesures d'endiguement et de sécurisation adaptées.</p>
+    level2_how_content: |
+      Au-delà du schéma global du réseau informatique, il est nécessaire de disposer d'un inventaire détaillé et à jour de tous les équipements et applicatifs concourant au fonctionnement du système d'information. Cet inventaire doit inclure pour chaque élément : sa version, sa criticité, son propriétaire/responsable, ses interconnexions, et sa date de dernière mise à jour. Cette documentation technique approfondie permettra une meilleure maîtrise des risques et une réaction plus efficace en cas d'incident.
+
+  - identifier: gouvernance-schema-si-industriel-a-jour
+    category: gouvernance
+    status: active
+    version: '1.0'
+    priority: 20
+    level1_title: Disposer d'un schéma global du réseau industriel et de la liste des interconnexions vers l'extérieur à jour
+    level1_why_content: |
+      <p>Pour bien se protéger de manière adaptée et pour faire le point sur les besoins et les capacités numériques actuels, il est nécessaire pour l'entité d'avoir une vision d'ensemble et une lisibilité quasi exhaustive de son réseau informatique et à minima un schéma général. Cette lisibilité est nécessaire pour instaurer un dialogue clair entre les différents interlocuteurs techniques et métiers et à décider des mesures de sécurité prioritaires à mener.</p>
+      <p>En complément des informations précédentes, le schéma et un inventaire des interconnexions à jour sont d'autant plus nécessaire sur le réseau industriel puisqu'un incident informatique sur ce dernier peut avoir des répercussions grave sur la production.</p>
+    level1_how_content: |
+      A l'instar d'un plan bâtimentaire, le schéma global du réseau industriel doit pouvoir tenir sur une page et représenter les différentes zones (PLC, capteurs, actionneurs, stations d'ingénierie et de supervision, etc), le plan d'adressage IP associé, les équipements réseaux et listant toutes les interconnexions vers l'extérieur (Internet, accès distants, réseaux partenaires ou prestataires, etc.). Il est recommandé d'imprimer des versions papiers de ces éléments.
+    level2_title: Disposer de la liste des équipements et applicatifs concourant au fonctionnement des systèmes industriels
+    level2_why_content: |
+      <p>Pour bien se protéger de manière adaptée et pour faire le point sur les besoins et les capacités numériques actuels, il est nécessaire pour l'entité d'avoir une vision d'ensemble et une lisibilité quasi exhaustive de son réseau informatique et à minima un schéma général. Cette lisibilité est nécessaire pour instaurer un dialogue clair entre les différents interlocuteurs techniques et métiers et à décider des mesures de sécurité prioritaires à mener.</p>
+      <p>En complément des informations précédentes, le schéma et un inventaire des interconnexions à jour sont d'autant plus nécessaire sur le réseau industriel puisqu'un incident informatique sur ce dernier peut avoir des répercussions grave sur la production.</p>
+    level2_how_content: |
+      Au-delà du schéma global du réseau industriel, il est nécessaire de disposer d'un inventaire détaillé et à jour de tous les équipements et applicatifs concourant au fonctionnement des systèmes industriels. Cet inventaire doit inclure pour chaque élément industriel : sa version de firmware/logiciel, sa criticité pour la production, son propriétaire/responsable, ses interconnexions réseau, et sa date de dernière mise à jour. Cette documentation technique approfondie permettra une meilleure maîtrise des risques industriels et une réaction plus efficace en cas d'incident de sécurité.
+
+  - identifier: gouvernance-connaissance-rgpd-1
+    category: gouvernance
+    status: active
+    version: '1.0'
+    priority: 15
+    level1_title: Établir la liste des données personnelles traitées au sein de votre entité
+    level1_why_content: |
+      <p>Le RGPD est une réglementation devant être obligatoirement appliquée par des entités stockant et traitant des données personnelles (cela concerne ainsi quasiment toutes les entités publiques et privées). Le RGPD encadre le traitement des données personnelles sur le territoire de l'Union européenne qui a pour principaux objectifs de protéger les données personnelles et de préserver les libertés individuelles offrant ainsi aux professionnels un cadre juridique unique dans leur démarche d'innovation et le développement des services numériques. Si l'entité ne respecte pas les exigences du RPGD, cette dernière encourt des mises en demeure et des sanctions financières pouvant s'élever au minimum à 5 000€ et jusqu'à 20 millions d'euros (ou 4% du CA mondial si supérieur).</p>
+      <p>L'établissement d'un registre de vos traitements de données personnelles est une exigence réglementaire de la CNIL. Au-delà de l'exigence réglementaire, ce registre vous permettra d'établir l'état des lieux exhaustif des données personnelles transitant au sein de votre système d'information et vous permettra d'en avoir une meilleure maitrise. Il s'agit d'une première étape indispensable pour mener sa démarche de conformité RGPD.</p>
+    level1_how_content: |
+      Le site de la CNIL regroupe en grand nombre de ressources et des modules de formation en ligne pour comprendre la réglementation et mettre en en œuvre les premières de conformité. La CNIL a publié tout particulièrement un modèle prêt à l'emploi via le lien suivant : <a href="https://www.cnil.fr/fr/RGDP-le-registre-des-activites-de-traitement">https://www.cnil.fr/fr/RGDP-le-registre-des-activites-de-traitement</a>
+    level2_title: Établir votre registre des activités de traitement de données personnelles et le tenir à jour
+    level2_why_content: |
+      <p>Le RGPD est une réglementation devant être obligatoirement appliquée par des entités stockant et traitant des données personnelles (cela concerne ainsi quasiment toutes les entités publiques et privées). Le RGPD encadre le traitement des données personnelles sur le territoire de l'Union européenne qui a pour principaux objectifs de protéger les données personnelles et de préserver les libertés individuelles offrant ainsi aux professionnels un cadre juridique unique dans leur démarche d'innovation et le développement des services numériques. Si l'entité ne respecte pas les exigences du RPGD, cette dernière encourt des mises en demeure et des sanctions financières pouvant s'élever au minimum à 5 000€ et jusqu'à 20 millions d'euros (ou 4% du CA mondial si supérieur).</p>
+      <p>L'établissement d'un registre de vos traitements de données personnelles est une exigence réglementaire de la CNIL. Au-delà de l'exigence réglementaire, ce registre vous permettra d'établir l'état des lieux exhaustif des données personnelles transitant au sein de votre système d'information et vous permettra d'en avoir une meilleure maitrise. Il s'agit d'une première étape indispensable pour mener sa démarche de conformité RGPD.</p>
+    level2_how_content: |
+      Le site de la CNIL regroupe en grand nombre de ressources et des modules de formation en ligne pour comprendre la réglementation et mettre en en œuvre les premières de conformité. La CNIL a publié tout particulièrement un modèle prêt à l'emploi via le lien suivant : <a href="https://www.cnil.fr/fr/RGDP-le-registre-des-activites-de-traitement">https://www.cnil.fr/fr/RGDP-le-registre-des-activites-de-traitement</a>
+
+  - identifier: gouvernance-connaissance-rgpd-2
+    category: gouvernance
+    status: active
+    version: '1.0'
+    priority: 16
+    level1_title: Fournir des informations aux personnes concernées sur l'utilisation de leurs données personnelles
+    level1_why_content: |
+      Il s'agit d'une exigence réglementaire, principe fondateur au cœur du RPGD. Les individus ont des droits sur leurs données : vous devez les en informer et leur permettre de les exercer.
+    level1_how_content: |
+      <p>Pour la formalisation des mentions d'information, il est conseillé de s'appuyer sur les exemples partagés par la CNIL suivants : <a href="https://www.cnil.fr/fr/rgpd-exemples-de-mentions-dinformation">https://www.cnil.fr/fr/rgpd-exemples-de-mentions-dinformation</a></p>
+      <p>Pour ce qui est de la mise en place des moyens permettant aux personnes concernées d'exercer et faire valoir leurs droits (droits d'accès, rectification, opposition, suppression, etc.), il est préconisé de s'appuyer sur la page d'information dédiée de la CNIL : <a href="https://www.cnil.fr/fr/respecter-les-droits-des-personnes">https://www.cnil.fr/fr/respecter-les-droits-des-personnes</a></p>
+      <p>Selon les problématiques de ressources humaines au sein de l'entité, il est peut-être envisagé de se faire accompagner par un prestataire pour lancer et mettre en œuvre cette mesure.</p>
+    level2_title: Mettre en place les modalités permettant aux personnes d'exercer de leurs droits
+    level2_why_content: |
+      Il s'agit d'une exigence réglementaire, principe fondateur au cœur du RPGD. Les individus ont des droits sur leurs données : vous devez les en informer et leur permettre de les exercer.
+    level2_how_content: |
+      <p>Pour la formalisation des mentions d'information, il est conseillé de s'appuyer sur les exemples partagés par la CNIL suivants : <a href="https://www.cnil.fr/fr/rgpd-exemples-de-mentions-dinformation">https://www.cnil.fr/fr/rgpd-exemples-de-mentions-dinformation</a></p>
+      <p>Pour ce qui est de la mise en place des moyens permettant aux personnes concernées d'exercer et faire valoir leurs droits (droits d'accès, rectification, opposition, suppression, etc.), il est préconisé de s'appuyer sur la page d'information dédiée de la CNIL : <a href="https://www.cnil.fr/fr/respecter-les-droits-des-personnes">https://www.cnil.fr/fr/respecter-les-droits-des-personnes</a></p>
+      <p>Selon les problématiques de ressources humaines au sein de l'entité, il est peut-être envisagé de se faire accompagner par un prestataire pour lancer et mettre en œuvre cette mesure.</p>
+
+  - identifier: gouvernance-exigence-cyber-securite-presta
+    category: gouvernance
+    status: active
+    version: '1.0'
+    priority: 24
+    level1_title: Fixer des exigences de cybersécurité aux prestataires
+    level1_why_content: |
+      Par méconnaissance ou par facilité d'exploitation, un prestataire pourrait ne pas mettre en œuvre et appliquer des bonnes pratiques de sécurité numérique générale, ou celles, plus spécifiques que le bénéficiaire aurait choisi de mettre en œuvre. L'ajout d'exigence de sécurité numérique dans les contrats, vis-à-vis d'un prestataire, responsabilise le prestataire et ses personnels vis-à-vis de ses propres comportements (réduisant ainsi directement les risques).
+    level1_how_content: |
+      Tout d'abord, il est nécessaire de s'assurer que chacune des prestations est liée à un contrat avec le prestataire. Puis, il convient de confirmer si un accès au système d"information est nécessaire. Enfin, il est recommandé de lister les mesures et les bonnes pratiques de sécurité à exiger aux prestataires au travers d'un clausier cyber type. Ces exigences de sécurité doivent être sélectionnés avec prudence, d'une part en fonction des spécificités du système d'information, d'autre part en tenant compte de la nature des prestations externalisées. Ces mesures pourraient par exemple portées sur :
+      <ul>
+        <li>le recensement et justification des dispositifs de télémaintenance</li>
+        <li>la sécurisation des accès distants (ex : chiffrement et filtrage des flux d'administration, utilisation des comptes d'administration nominatifs avec privilèges limités au strict nécessaire sauf contrainte justifiée, double authentification ou authentification via VPN seulement etc.),</li>
+        <li>le renforcement de la robustesse et complexité des mots de passe utilisés (16 caractères minimum, utilisation d'un coffre-fort de mots de passe, etc.),</li>
+        <li>la protection antivirale des postes et serveurs d'administration</li>
+        <li>l'interdiction d'utiliser des équipements et adresses mails personnels</li>
+        <li>l'application et le déploiement des mises à jour et correctifs de sécurité critiques dans un délai d'une semaine</li>
+        <li>la réalisation de sauvegarde et de tests de restauration selon la période jugée acceptable par l'entité</li>
+        <li>l'assurance d'une continuité et d'une reprise d'activité selon les délais jugés acceptable par l'entité</li>
+        <li>la journalisation des logs de connexion et d'administration</li>
+      </ul>
+      Pour aller plus loin un exemple de plan d'assurance sécurité a été formalisé par l'ANSSI dans le guide "Maîtriser les risques de l'infogérance" : <a href="https://cyber.gouv.fr/sites/default/files/IMG/pdf/2010-12-03_Guide_externalisation.pdf" target="_blank">https://cyber.gouv.fr/sites/default/files/IMG/pdf/2010-12-03_Guide_externalisation.pdf</a>
+    level2_title: Vérifier l'application et imposer des pénalités aux prestataires en cas de non-respect des exigences de cybersécurité
+    level2_why_content: |
+      Par méconnaissance ou par facilité d'exploitation, un prestataire pourrait ne pas mettre en œuvre et appliquer des bonnes pratiques de sécurité numérique générale, ou celles, plus spécifiques que le bénéficiaire aurait choisi de mettre en œuvre. L'ajout d'exigence de sécurité numérique dans les contrats, vis-à-vis d'un prestataire, responsabilise le prestataire et ses personnels vis-à-vis de ses propres comportements (réduisant ainsi directement les risques).
+    level2_how_content: |
+      Au-delà de la formalisation des exigences dans les contrats, il est nécessaire de mettre en place des mécanismes de vérification et de contrôle de l'application effective de ces mesures par les prestataires. Cela peut inclure des audits réguliers, des reportings de sécurité, des tests de conformité et des clauses de pénalités financières en cas de non-respect. Un suivi régulier et des contrôles permettent de s'assurer que les exigences ne restent pas lettre morte.
