@@ -1,0 +1,314 @@
+{
+  "questions": [
+    {
+      "label": "reaction-surveillance-veille-vulnerabilites-potentielles",
+      "text": "Un suivi des alertes de cybersécurité et des vulnérabilités publiées pouvant vous affecter est-il réalisé ?",
+      "question_type": "single_choice",
+      "weight": 2,
+      "active_status": true,
+      "categories": [
+        "Réaction à une cyberattaque"
+      ],
+      "tooltip_content": "<div>\n  <h5>Entités publiques</h5>\n  <p>Les entités publiques sont éligibles au service gratuit SILENE de l'ANSSI qui permet d'identifier la surface d'attaque des services exposés sur Internet. Pour y accéder, l'entité est invitée à s'orienter vers le service ANSSI https://club.ssi.gouv.fr/.</p>\n</div>\n<div>\n  <h5>Suivi des alertes et des vulnérabilités</h5>\n  <div>Le suivi des alertes et des vulnérabilités consiste à se tenir informé des vulnérabilités techniques de cybersécurité critiques pouvant affecter son système d'information (selon les équipements et les systèmes utilisés). Des services gratuits centralisent et répertorient ces vulnérabilités, par exemple le site du <a href=\"https://www.cert.ssi.gouv.fr/\" target=\"_blank\">CERT-FR de l'ANSSI</a>.</div>\n</div>\n",
+      "answer_options": [
+        {
+          "text": "Je ne sais pas",
+          "identifier": "reaction-surveillance-veille-vulnerabilites-potentielles-nsp",
+          "order_index": 0
+        },
+        {
+          "text": "Non",
+          "identifier": "reaction-surveillance-veille-vulnerabilites-potentielles-non",
+          "order_index": 1,
+          "indice": 0.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "reaction-surveillance-veille-vulnerabilites-potentielles",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Un suivi ponctuel est réalisé",
+          "identifier": "reaction-surveillance-veille-vulnerabilites-potentielles-veille-ponctuelle",
+          "order_index": 2,
+          "indice": 1.5,
+          "triggered_security_measures": [
+            {
+              "identifier": "reaction-surveillance-veille-vulnerabilites-potentielles",
+              "niveau": 2
+            }
+          ]
+        },
+        {
+          "text": "Une veille proactive et exhaustive est réalisée",
+          "identifier": "reaction-surveillance-veille-vulnerabilites-potentielles-veille-reguliere",
+          "order_index": 3,
+          "indice": 3.0
+        }
+      ]
+    },
+    {
+      "label": "reaction-sauvegardes-donnees-realisees",
+      "text": "Des sauvegardes régulières des données sont-elles réalisées ?",
+      "question_type": "single_choice",
+      "weight": 3,
+      "active_status": true,
+      "categories": [
+        "Réaction à une cyberattaque"
+      ],
+      "tooltip_content": "<div>\n  <h5>Jeu de sauvegarde isolé</h5>\n  <div>Le jeu de sauvegarde isolé (ou sanctuarisé) peut être réalisé de plusieurs manières :\n    <ul>\n      <li>sur un périphérique de stockage déconnecté du réseau (bandes, disques durs externes, clefs usb),</li>\n      <li>dans un cloud externe privé, non interconnecté à l'environnement bureautique, via une authentification spécifique,</li>\n      <li>sur un serveur ou média déconnecté physiquement et/ou logiquement à l'issue de chaque sauvegarde.</li>\n    </ul>\n  </div>\n  <div>Ce jeu de sauvegarde ne doit donc pas être accessible via l'Active Directory (ou autre service d'annuaire centralisé).</div>\n</div>\n<div>\n  <h5>Sauvegarde des ressources hébergées en cloud</h5>\n  <div>Il convient aussi de s'assurer que les mécanismes de sauvegarde mis en œuvre par l'entité (ou par son prestataire) prennent également en compte les ressources bureautiques et/ou métiers qui sont seulement hébergées dans des environnements cloud.</div>\n</div>\n",
+      "answer_options": [
+        {
+          "text": "Je ne sais pas",
+          "identifier": "reaction-sauvegardes-donnees-realisees-nsp",
+          "order_index": 0
+        },
+        {
+          "text": "Non",
+          "identifier": "reaction-sauvegardes-donnees-realisees-non",
+          "order_index": 1,
+          "indice": 0.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "reaction-sauvegardes-donnees-realisees",
+              "niveau": 1
+            },
+            {
+              "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-environnement-isole",
+              "niveau": 1
+            },
+            {
+              "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-sauvegarde-testee-regulierement",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Des sauvegardes des données sont réalisées ponctuellement",
+          "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement",
+          "order_index": 2,
+          "indice": 1.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "reaction-sauvegardes-donnees-realisees",
+              "niveau": 1
+            }
+          ],
+          "triggered_questions": [
+            {
+              "label": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-environnement-isole",
+              "text": "Existe-t-il au moins un jeu de sauvegarde des données critiques stockées dans un environnement isolé du réseau bureautique interne ou \"hors ligne\" ?",
+              "question_type": "single_choice",
+              "weight": 3,
+              "active_status": true,
+              "answer_options": [
+                {
+                  "text": "Non applicable",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-environnement-isole-na",
+                  "order_index": 0
+                },
+                {
+                  "text": "Je ne sais pas",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-environnement-isole-nsp",
+                  "order_index": 1
+                },
+                {
+                  "text": "Non",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-environnement-isole-non",
+                  "order_index": 2,
+                  "indice": 0.0,
+                  "triggered_security_measures": [
+                    {
+                      "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-environnement-isole",
+                      "niveau": 1
+                    }
+                  ]
+                },
+                {
+                  "text": "Oui",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-environnement-isole-oui",
+                  "order_index": 3,
+                  "indice": 3.0,
+                  "triggered_security_measures": [
+                    {
+                      "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-environnement-isole",
+                      "niveau": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-sauvegarde-testee-regulierement",
+              "text": "La restauration des sauvegardes de toutes vos données critiques est-elle testée régulièrement ?",
+              "question_type": "single_choice",
+              "weight": 3,
+              "active_status": true,
+              "answer_options": [
+                {
+                  "text": "Non applicable",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-sauvegarde-testee-regulierement-na",
+                  "order_index": 0
+                },
+                {
+                  "text": "Je ne sais pas",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-sauvegarde-testee-regulierement-nsp",
+                  "order_index": 1
+                },
+                {
+                  "text": "Non",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-sauvegarde-testee-regulierement-non",
+                  "order_index": 2,
+                  "indice": 0.0,
+                  "triggered_security_measures": [
+                    {
+                      "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-sauvegarde-testee-regulierement",
+                      "niveau": 1
+                    }
+                  ]
+                },
+                {
+                  "text": "Oui",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-ponctuellement-tiroir-sauvegarde-testee-regulierement-oui",
+                  "order_index": 3,
+                  "indice": 3.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Des sauvegardes des données sont réalisées de manière automatique et régulière",
+          "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere",
+          "order_index": 3,
+          "indice": 3.0,
+          "triggered_questions": [
+            {
+              "label": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-environnement-isole",
+              "text": "Existe-t-il au moins un jeu de sauvegarde des données critiques stockées dans un environnement isolé du réseau bureautique interne ou \"hors ligne\" ?",
+              "question_type": "single_choice",
+              "weight": 3,
+              "active_status": true,
+              "answer_options": [
+                {
+                  "text": "Non applicable",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-environnement-isole-na",
+                  "order_index": 0
+                },
+                {
+                  "text": "Je ne sais pas",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-environnement-isole-nsp",
+                  "order_index": 1
+                },
+                {
+                  "text": "Non",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-environnement-isole-non",
+                  "order_index": 2,
+                  "indice": 0.0,
+                  "triggered_security_measures": [
+                    {
+                      "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-environnement-isole",
+                      "niveau": 1
+                    }
+                  ]
+                },
+                {
+                  "text": "Oui",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-environnement-isole-oui",
+                  "order_index": 3,
+                  "indice": 3.0
+                }
+              ]
+            },
+            {
+              "label": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-sauvegarde-testee-regulierement",
+              "text": "La restauration des sauvegardes de toutes vos données critiques est-elle testée régulièrement ?",
+              "question_type": "single_choice",
+              "weight": 3,
+              "active_status": true,
+              "answer_options": [
+                {
+                  "text": "Non applicable",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-sauvegarde-testee-regulierement-na",
+                  "order_index": 0
+                },
+                {
+                  "text": "Je ne sais pas",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-sauvegarde-testee-regulierement-nsp",
+                  "order_index": 1
+                },
+                {
+                  "text": "Non",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-sauvegarde-testee-regulierement-non",
+                  "order_index": 2,
+                  "indice": 0.0,
+                  "triggered_security_measures": [
+                    {
+                      "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-sauvegarde-testee-regulierement",
+                      "niveau": 1
+                    }
+                  ]
+                },
+                {
+                  "text": "Oui",
+                  "identifier": "reaction-sauvegardes-donnees-realisees-oui-automatique-et-reguliere-tiroir-sauvegarde-testee-regulierement-oui",
+                  "order_index": 3,
+                  "indice": 3.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "reaction-dispositif-gestion-crise-adapte-defini",
+      "text": "Savez-vous comment réagir en cas de cyberattaque ?",
+      "question_type": "single_choice",
+      "weight": 3,
+      "active_status": true,
+      "categories": [
+        "Réaction à une cyberattaque"
+      ],
+      "tooltip_content": "<div>\n  <h5>Organisation de gestion de crise</h5>\n  <p>Une organisation de gestion de crise doit à minima identifier les priorités métier à rétablir en cas de crise, des fiches réflexes opérationnelles garantissant la continuité d'activité au travers de modes dégradés défini avec les métiers (ex : assurer la paie, poursuivre la production, gestion des agendas, etc.), des moyens et modalités de communication de crise.</p>\n</div>\n",
+      "answer_options": [
+        {
+          "text": "Je ne sais pas",
+          "identifier": "reaction-dispositif-gestion-crise-adapte-defini-nsp",
+          "order_index": 0
+        },
+        {
+          "text": "Non",
+          "identifier": "reaction-dispositif-gestion-crise-adapte-defini-non",
+          "order_index": 1,
+          "indice": 0.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "reaction-dispositif-gestion-crise-adapte-defini",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Oui, nous avons formalisé une fiche réflexe dédiée",
+          "identifier": "reaction-dispositif-gestion-crise-adapte-defini-oui-fiche-reflexe",
+          "order_index": 2,
+          "indice": 1.5,
+          "triggered_security_measures": [
+            {
+              "identifier": "reaction-dispositif-gestion-crise-adapte-defini",
+              "niveau": 2
+            }
+          ]
+        },
+        {
+          "text": "Oui, une organisation de gestion de crise d'origine cyber a été définie",
+          "identifier": "reaction-dispositif-gestion-crise-adapte-defini-oui-organisation-gestion-crise-definie",
+          "order_index": 3,
+          "indice": 3.0
+        }
+      ]
+    }
+  ]
+}

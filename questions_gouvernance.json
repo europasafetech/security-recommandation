@@ -1,0 +1,314 @@
+{
+  "questions": [
+    {
+      "label": "gouvernance-infos-et-activites-a-proteger",
+      "text": "Avez-vous déterminé les activités et les données à protéger en priorité ?",
+      "question_type": "single_choice",
+      "weight": 2,
+      "active_status": true,
+      "categories": [
+        "Gouvernance"
+      ],
+      "tooltip_content": "<div>\n  <h5>À protéger en priorité</h5>\n  <div>Peuvent être jugées prioritaires :\n    <ul>\n      <li>les activités critiques, indispensables à l'activité,</li>\n      <li>les informations sensibles, confidentielles et/ou ne devant pas être volées et exfiltrées</li>\n    </ul>\n  </div>\n  <div>Exemples d'activités et de données à protéger en priorité, classées par ordre de priorité :\n    <ol>\n      <li>Production et données techniques de production</li>\n      <li>R&D et données d'industrialisation</li>\n      <li>Paie des salariés et données bancaires associées</li>\n      <li>Facturation et données clients</li>\n      <li>Courriels, agenda et données bureautiques associées</li>\n    </ol>\n  </div>\n</div>\n",
+      "answer_options": [
+        {
+          "text": "Je ne sais pas",
+          "identifier": "gouvernance-infos-et-activites-a-proteger-nsp",
+          "order_index": 0
+        },
+        {
+          "text": "Non",
+          "identifier": "gouvernance-infos-et-activites-a-proteger-non",
+          "order_index": 1,
+          "indice": 0.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-infos-et-activites-a-proteger",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Nous avons une idée générale de nos activités et données à protéger en priorité",
+          "identifier": "gouvernance-infos-et-activites-a-proteger-oui-idee-generale",
+          "order_index": 2,
+          "indice": 1.5,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-infos-et-activites-a-proteger",
+              "niveau": 2
+            }
+          ]
+        },
+        {
+          "text": "Il existe une liste précise et maintenue à jour de toutes les activités et données métiers à protéger en priorité à l'échelle de l'entité",
+          "identifier": "gouvernance-infos-et-activites-a-proteger-oui-precise",
+          "order_index": 3,
+          "indice": 3.0
+        }
+      ]
+    },
+    {
+      "label": "gouvernance-schema-si-a-jour",
+      "text": "Existe-t-il un plan du système d'information de l'entité ?",
+      "question_type": "single_choice",
+      "weight": 1,
+      "active_status": true,
+      "categories": [
+        "Gouvernance"
+      ],
+      "tooltip_content": "<div>\n  <h5>Interconnexions extérieures</h5>\n  <p>IP publiques, accès distants ouverts aux prestataires et partenaires, etc.</p>\n</div>\n<div>\n  <h5>Entités publiques</h5>\n  <p>Les entités publiques sont éligibles au service gratuit SILENE de l'ANSSI qui permet d'identifier la surface d'attaque des services exposés sur Internet.<br />Pour y accéder, l'entité est invitée à s'orienter vers le service ANSSI https://club.ssi.gouv.fr/.</p>\n</div>\n",
+      "answer_options": [
+        {
+          "text": "Je ne sais pas",
+          "identifier": "gouvernance-schema-si-a-jour-nsp",
+          "order_index": 0
+        },
+        {
+          "text": "Non",
+          "identifier": "gouvernance-schema-si-a-jour-non",
+          "order_index": 1,
+          "indice": 0.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-schema-si-a-jour",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Nous avons un plan historique qui n'est pas à jour",
+          "identifier": "gouvernance-schema-si-a-jour-non-plan-historique-obsolete",
+          "order_index": 2,
+          "indice": 0.5,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-schema-si-a-jour",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Il existe un plan \"macro\" non détaillé ou partiellement détaillé à jour",
+          "identifier": "gouvernance-schema-si-a-jour-oui-macro",
+          "order_index": 3,
+          "indice": 1.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-schema-si-a-jour",
+              "niveau": 2
+            }
+          ]
+        },
+        {
+          "text": "Il existe un schéma détaillé à jour, incluant la liste exhaustive des interconnexions vers l'extérieur",
+          "identifier": "gouvernance-schema-si-a-jour-oui-detaille",
+          "order_index": 4,
+          "indice": 3.0
+        }
+      ]
+    },
+    {
+      "label": "gouvernance-schema-si-industriel-a-jour",
+      "text": "Existe-t-il un plan et un inventaire des systèmes d'informations industriels de l'entité ?",
+      "question_type": "single_choice",
+      "weight": 1,
+      "active_status": true,
+      "categories": [
+        "Gouvernance"
+      ],
+      "tooltip_content": "<div>\n  <h5>Composants</h5>\n  <p>Équipements réseaux (routeur, switch/commutateur, borne-wifi, pare-feu et autres équipements de sécurité), les serveurs (en précisant leurs fonctionnalités), les infrastructures de sauvegarde, les postes de travail utilisateurs et les supports mobiles interconnectés au réseau.</p>\n</div>\n",
+      "answer_options": [
+        {
+          "text": "Non applicable",
+          "identifier": "gouvernance-schema-si-industriel-a-jour-na",
+          "order_index": 0
+        },
+        {
+          "text": "Je ne sais pas",
+          "identifier": "gouvernance-schema-si-industriel-a-jour-nsp",
+          "order_index": 1
+        },
+        {
+          "text": "Non",
+          "identifier": "gouvernance-schema-si-industriel-a-jour-non",
+          "order_index": 2,
+          "indice": 0.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-schema-si-industriel-a-jour",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Il existe un plan \"macro\" non détaillé ou partiellement détaillé à jour",
+          "identifier": "gouvernance-schema-si-industriel-a-jour-oui-partiel",
+          "order_index": 3,
+          "indice": 1.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-schema-si-industriel-a-jour",
+              "niveau": 2
+            }
+          ]
+        },
+        {
+          "text": "Il existe un plan détaillé, incluant la liste détaillée des composants du système d'information et la liste exhaustive des interconnexions vers l'extérieur",
+          "identifier": "gouvernance-schema-si-industriel-a-jour-oui-detaille",
+          "order_index": 4,
+          "indice": 3.0
+        }
+      ]
+    },
+    {
+      "label": "gouvernance-connaissance-rgpd-1",
+      "text": "Avez-vous listé les données personnelles traitées au sein de votre entité ?",
+      "question_type": "single_choice",
+      "weight": 1,
+      "active_status": true,
+      "categories": [
+        "Gouvernance"
+      ],
+      "tooltip_content": "<div>\n  <h5>CNIL</h5>\n  <p>Attention à ne pas tomber dans un contrôle de conformité au RGPD, ces informations ne seront pas partagées à la CNIL. Si nécessaire, rappeler de manière pédagogique que le Règlement Général sur Protection des Données est une obligation réglementaire qui s'applique à toute entité, publique et privée, qui gère et stocke des données personnelles.</p>\n</div>\n<div>\n  <h5>Données personnelles</h5>\n  <div>Exemples de données personnelles :\n    <ul>\n      <li>Données liées au personnel,</li>\n      <li>Données des clients ou des usagers,</li>\n      <li>Données des fournisseurs ou partenaires.</li>\n    </ul>\n  </div>\n</div>\n",
+      "answer_options": [
+        {
+          "text": "Je ne sais pas",
+          "identifier": "gouvernance-connaissance-rgpd-1-nsp",
+          "order_index": 1
+        },
+        {
+          "text": "Non",
+          "identifier": "gouvernance-connaissance-rgpd-1-non",
+          "order_index": 2,
+          "indice": 0.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-connaissance-rgpd-1",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Oui, nous avons listé l'ensemble des données personnelles traitées au sein de mon entité",
+          "identifier": "gouvernance-connaissance-rgpd-1-oui-liste-données",
+          "order_index": 3,
+          "indice": 2.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-connaissance-rgpd-1",
+              "niveau": 2
+            }
+          ]
+        },
+        {
+          "text": "Oui, nous tenons à jour un registre des traitements",
+          "identifier": "gouvernance-connaissance-rgpd-1-oui-registre",
+          "order_index": 4,
+          "indice": 3.0
+        }
+      ]
+    },
+    {
+      "label": "gouvernance-connaissance-rgpd-2",
+      "text": "Informez-vous les personnes concernées sur l'utilisation de leurs données personnelles et leurs droits ? ",
+      "question_type": "single_choice",
+      "weight": 1,
+      "active_status": true,
+      "categories": [
+        "Gouvernance"
+      ],
+      "tooltip_content": "<div>\n  <h5>Utilisation des données personnelles</h5>\n  <p>Il existe une page d'information dédiée à l'utilisation des données personnelles et la gestion des droits d'informations et les moyens de les exercer sur le site de la CNIL : <a href=\"https://www.cnil.fr/fr/respecter-les-droits-des-personnes\">https://www.cnil.fr/fr/respecter-les-droits-des-personnes</a></p>\n</div>\n",
+      "answer_options": [
+        {
+          "text": "Je ne sais pas",
+          "identifier": "gouvernance-connaissance-rgpd-2-nsp",
+          "order_index": 1
+        },
+        {
+          "text": "Non",
+          "identifier": "gouvernance-connaissance-rgpd-2-non",
+          "order_index": 2,
+          "indice": 0.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-connaissance-rgpd-2",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Oui, j'informe les personnes concernées sur l'utilisation de leurs données personnelles",
+          "identifier": "gouvernance-connaissance-rgpd-2-oui-liste-données",
+          "order_index": 3,
+          "indice": 2.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-connaissance-rgpd-2",
+              "niveau": 2
+            }
+          ]
+        },
+        {
+          "text": "Oui, j'informe les personnes concernées et j'ai mis en place les moyens nécessaires leur permettant d'exercer leurs droits (ex : accès, rectification, opposition, suppression)",
+          "identifier": "gouvernance-connaissance-rgpd-2-oui-registre",
+          "order_index": 4,
+          "indice": 3.0
+        }
+      ]
+    },
+    {
+      "label": "gouvernance-exigence-cyber-securite-presta",
+      "text": "Des exigences de cybersécurité sont-elles intégrées aux contrats des prestataires disposant d'accès informatiques ?",
+      "question_type": "single_choice",
+      "weight": 2,
+      "active_status": true,
+      "categories": [
+        "Gouvernance"
+      ],
+      "tooltip_content": "<div>\n  <h5>Contrats des prestataires</h5>\n  <p>Cette question suppose que l'entité ait des contrats avec ses prestataires et sait lesquels ont accès à son système d'information, sinon, nous vous invitons à cocher \"Non, aucune exigence ne figure dans nos contrats de prestation.\"</p>\n  <p>Exemples d'exigences pouvant être intégrées dans un contrat : changement des mots de passe par défaut ; sécurisation des accès distants ; délai de déploiement des mises à jour critiques ; signalement en cas de cyberattaque ; contractualisation d'un plan d'assurance sécurité (PAS).</p>\n</div>\n<div>\n  <h5>Systèmes industriels</h5>\n  <p>Si l'entité est concernée, cette question s'applique également pour les prestataires disposant d'accès informatiques sur les systèmes industriels</p>\n</div>\n",
+      "answer_options": [
+        {
+          "text": "Non applicable",
+          "identifier": "gouvernance-exigence-cyber-securite-presta-na",
+          "order_index": 0
+        },
+        {
+          "text": "Je ne sais pas",
+          "identifier": "gouvernance-exigence-cyber-securite-presta-nsp",
+          "order_index": 1
+        },
+        {
+          "text": "Non, aucune exigence ne figure dans nos contrats de prestation",
+          "identifier": "gouvernance-exigence-cyber-securite-presta-non",
+          "order_index": 2,
+          "indice": 0.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-exigence-cyber-securite-presta",
+              "niveau": 1
+            }
+          ]
+        },
+        {
+          "text": "Oui, des exigences de cybersécurité sont formalisées et fixées aux prestataires",
+          "identifier": "gouvernance-exigence-cyber-securite-presta-oui-formalisee",
+          "order_index": 3,
+          "indice": 2.0,
+          "triggered_security_measures": [
+            {
+              "identifier": "gouvernance-exigence-cyber-securite-presta",
+              "niveau": 2
+            }
+          ]
+        },
+        {
+          "text": "Oui, des exigences de cybersécurité avec pénalités sont formalisées et fixées aux prestataires",
+          "identifier": "gouvernance-exigence-cyber-securite-presta-oui-fixee",
+          "order_index": 4,
+          "indice": 3.0
+        }
+      ]
+    }
+  ]
+}
